@@ -338,15 +338,19 @@ public class HomePage extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
-        // TODO add your handling code here:
+        close();
+       HelpPage a = new HelpPage();
+        a.setVisible(true);
     }//GEN-LAST:event_jLabel11MouseClicked
 
     private void jLabel11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseEntered
-        // TODO add your handling code here:
+        jLabel11.setForeground(new java.awt.Color(42, 60, 76));
+                                       
     }//GEN-LAST:event_jLabel11MouseEntered
 
     private void jLabel11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseExited
-        // TODO add your handling code here:
+       jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+                                       
     }//GEN-LAST:event_jLabel11MouseExited
 
     /**
