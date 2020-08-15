@@ -163,7 +163,7 @@ public class SignUpPage extends javax.swing.JFrame {
         jLabel15.setText("Password");
 
         jLabel16.setFont(new java.awt.Font("Segoe UI Semibold", 1, 16)); // NOI18N
-        jLabel16.setText("Phone");
+        jLabel16.setText("Confirm Password");
 
         jLabel17.setFont(new java.awt.Font("Segoe UI Semibold", 1, 16)); // NOI18N
         jLabel17.setText("Surname");
@@ -273,7 +273,7 @@ public class SignUpPage extends javax.swing.JFrame {
                                         .addComponent(jLabel21, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                                     .addComponent(jLabel15)
                                     .addComponent(jLabel17))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 146, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
                                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(txtsurname, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(txtuser, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -476,28 +476,32 @@ public class SignUpPage extends javax.swing.JFrame {
         String surname = txtsurname.getText();
         String username = txtuser.getText();
         String password = txtpass.getText();
-        String phone = txtphone.getText();
+        String rpass = txtphone.getText();
         String address = txtadd.getText();
         String city = txtcity.getText();
         String postalcode = txtpost.getText();
         String country = txtcountry.getText();
         
         
-        if (username.equals("") || name.equals("") || surname.equals("") || password.equals("") || phone.equals("") || address.equals("") || city.equals("") || postalcode.equals("") || country.equals(""))
+        if (username.equals("") || name.equals("") || surname.equals("") || password.equals("") || rpass.equals("") || address.equals("") || city.equals("") || postalcode.equals("") || country.equals(""))
         {
             JOptionPane.showMessageDialog(null,"One or more Fields are Blank","Error",JOptionPane.ERROR_MESSAGE);
         }
+        else if(!password.equals(rpass))
+            {
+                 JOptionPane.showMessageDialog(null,"Passwords don't match, retype them!","Error", JOptionPane.ERROR_MESSAGE);
+                }
         else{
        
           try {
               Class.forName("com.mysql.cj.jdbc.Driver");
               con = DriverManager.getConnection("jdbc:mysql://localhost/gdprv1.0","root","");
-              pst = con.prepareStatement("insert into customers(customerName,customerSurname,username,password,phone,address,city,postalCode,country)values(?,?,?,?,?,?,?,?,?)");
+              pst = con.prepareStatement("insert into customers(customerName,customerSurname,username,password,rpass,address,city,postalCode,country)values(?,?,?,?,?,?,?,?,?)");
               pst.setString(1, name);
               pst.setString(2, surname);
               pst.setString(3, username);
               pst.setString(4, password);
-              pst.setString(5, phone);
+              pst.setString(5, rpass);
               pst.setString(6, address);
               pst.setString(7, city);
               pst.setString(8, postalcode);

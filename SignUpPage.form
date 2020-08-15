@@ -104,7 +104,7 @@
                                       <Component id="jLabel15" alignment="0" min="-2" max="-2" attributes="0"/>
                                       <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
                                   </Group>
-                                  <EmptySpace pref="146" max="32767" attributes="0"/>
+                                  <EmptySpace pref="101" max="32767" attributes="0"/>
                                   <Group type="103" groupAlignment="0" attributes="0">
                                       <Component id="txtsurname" alignment="1" min="-2" pref="250" max="-2" attributes="0"/>
                                       <Component id="txtuser" alignment="1" min="-2" pref="250" max="-2" attributes="0"/>
@@ -322,7 +322,7 @@
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Segoe UI Semibold" size="16" style="1"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Phone"/>
+            <Property name="text" type="java.lang.String" value="Confirm Password"/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="jLabel17">
