@@ -105,15 +105,15 @@
                                       <Component id="jLabel17" min="-2" max="-2" attributes="0"/>
                                   </Group>
                                   <EmptySpace pref="101" max="32767" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="txtsurname" alignment="1" min="-2" pref="250" max="-2" attributes="0"/>
-                                      <Component id="txtuser" alignment="1" min="-2" pref="250" max="-2" attributes="0"/>
-                                      <Component id="txtpass" alignment="1" min="-2" pref="250" max="-2" attributes="0"/>
-                                      <Component id="txtphone" alignment="1" min="-2" pref="250" max="-2" attributes="0"/>
-                                      <Component id="txtadd" alignment="1" min="-2" pref="250" max="-2" attributes="0"/>
-                                      <Component id="txtcity" alignment="1" min="-2" pref="250" max="-2" attributes="0"/>
-                                      <Component id="txtpost" alignment="1" min="-2" pref="250" max="-2" attributes="0"/>
-                                      <Component id="txtcountry" alignment="1" min="-2" pref="250" max="-2" attributes="0"/>
+                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                      <Component id="txtsurname" alignment="0" pref="250" max="32767" attributes="0"/>
+                                      <Component id="txtuser" alignment="0" pref="250" max="32767" attributes="0"/>
+                                      <Component id="txtadd" alignment="0" pref="250" max="32767" attributes="0"/>
+                                      <Component id="txtcity" alignment="0" pref="250" max="32767" attributes="0"/>
+                                      <Component id="txtpost" alignment="0" pref="250" max="32767" attributes="0"/>
+                                      <Component id="txtcountry" alignment="0" pref="250" max="32767" attributes="0"/>
+                                      <Component id="txtrpass" alignment="0" max="32767" attributes="0"/>
+                                      <Component id="txtpass" alignment="0" max="32767" attributes="0"/>
                                   </Group>
                               </Group>
                           </Group>
@@ -151,20 +151,17 @@
                           <EmptySpace max="-2" attributes="0"/>
                       </Group>
                   </Group>
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="jLabel15" min="-2" pref="30" max="-2" attributes="0"/>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="txtpass" min="-2" pref="30" max="-2" attributes="0"/>
-                          <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="1" max="-2" attributes="0"/>
+                          <Component id="jLabel15" min="-2" pref="30" max="-2" attributes="0"/>
                       </Group>
+                      <Component id="txtpass" alignment="0" min="-2" pref="31" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
                       <Component id="jLabel16" min="-2" pref="25" max="-2" attributes="0"/>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Component id="txtphone" min="-2" pref="28" max="-2" attributes="0"/>
-                          <EmptySpace min="1" pref="1" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="txtrpass" min="-2" pref="31" max="-2" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="1" attributes="0">
@@ -348,20 +345,6 @@
             </Property>
           </Properties>
         </Component>
-        <Component class="javax.swing.JTextField" name="txtpass">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="12" style="0"/>
-            </Property>
-          </Properties>
-        </Component>
-        <Component class="javax.swing.JTextField" name="txtphone">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Segoe UI" size="12" style="0"/>
-            </Property>
-          </Properties>
-        </Component>
         <Component class="javax.swing.JTextField" name="txtadd">
           <Properties>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
@@ -471,6 +454,20 @@
               <Font name="Segoe UI Semibold" size="16" style="1"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Name"/>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JPasswordField" name="txtrpass">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="12" style="1"/>
+            </Property>
+          </Properties>
+        </Component>
+        <Component class="javax.swing.JPasswordField" name="txtpass">
+          <Properties>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Segoe UI" size="12" style="1"/>
+            </Property>
           </Properties>
         </Component>
       </SubComponents>

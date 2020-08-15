@@ -410,7 +410,7 @@ public class LoginPage extends javax.swing.JFrame {
         String username = txtuser.getText();
         String password= txtpass.getText();
          if(username.equals("") || password.equals("")){
-             JOptionPane.showMessageDialog(null, "Username or Password are blank","Error",JOptionPane.ERROR_MESSAGE);
+             JOptionPane.showMessageDialog(null, "Username or Password are blank!","Error",JOptionPane.ERROR_MESSAGE);
          }
          else{
           try {        

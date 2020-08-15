@@ -64,8 +64,6 @@ public class SignUpPage extends javax.swing.JFrame {
         jLabel17 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
         txtuser = new javax.swing.JTextField();
-        txtpass = new javax.swing.JTextField();
-        txtphone = new javax.swing.JTextField();
         txtadd = new javax.swing.JTextField();
         txtcity = new javax.swing.JTextField();
         txtpost = new javax.swing.JTextField();
@@ -78,6 +76,8 @@ public class SignUpPage extends javax.swing.JFrame {
         jLabel23 = new javax.swing.JLabel();
         txtname = new javax.swing.JTextField();
         jLabel24 = new javax.swing.JLabel();
+        txtrpass = new javax.swing.JPasswordField();
+        txtpass = new javax.swing.JPasswordField();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
@@ -173,10 +173,6 @@ public class SignUpPage extends javax.swing.JFrame {
 
         txtuser.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
 
-        txtpass.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
-
-        txtphone.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
-
         txtadd.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
 
         txtcity.setFont(new java.awt.Font("Segoe UI", 0, 12)); // NOI18N
@@ -229,6 +225,10 @@ public class SignUpPage extends javax.swing.JFrame {
         jLabel24.setFont(new java.awt.Font("Segoe UI Semibold", 1, 16)); // NOI18N
         jLabel24.setText("Name");
 
+        txtrpass.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+
+        txtpass.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -274,15 +274,15 @@ public class SignUpPage extends javax.swing.JFrame {
                                     .addComponent(jLabel15)
                                     .addComponent(jLabel17))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 101, Short.MAX_VALUE)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(txtsurname, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtuser, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtpass, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtphone, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtadd, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtcity, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtpost, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(txtcountry, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtsurname, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                                    .addComponent(txtuser, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                                    .addComponent(txtadd, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                                    .addComponent(txtcity, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                                    .addComponent(txtpost, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                                    .addComponent(txtcountry, javax.swing.GroupLayout.DEFAULT_SIZE, 250, Short.MAX_VALUE)
+                                    .addComponent(txtrpass)
+                                    .addComponent(txtpass))))
                         .addGap(80, 80, 80))))
         );
         jPanel1Layout.setVerticalGroup(
@@ -307,17 +307,15 @@ public class SignUpPage extends javax.swing.JFrame {
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(txtuser, javax.swing.GroupLayout.PREFERRED_SIZE, 29, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(txtpass, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(1, 1, 1)))
+                        .addGap(1, 1, 1)
+                        .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txtpass, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(txtphone, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(1, 1, 1)))
+                    .addComponent(txtrpass, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -476,7 +474,7 @@ public class SignUpPage extends javax.swing.JFrame {
         String surname = txtsurname.getText();
         String username = txtuser.getText();
         String password = txtpass.getText();
-        String rpass = txtphone.getText();
+        String rpass = txtrpass.getText();
         String address = txtadd.getText();
         String city = txtcity.getText();
         String postalcode = txtpost.getText();
@@ -496,16 +494,16 @@ public class SignUpPage extends javax.swing.JFrame {
           try {
               Class.forName("com.mysql.cj.jdbc.Driver");
               con = DriverManager.getConnection("jdbc:mysql://localhost/gdprv1.0","root","");
-              pst = con.prepareStatement("insert into customers(customerName,customerSurname,username,password,rpass,address,city,postalCode,country)values(?,?,?,?,?,?,?,?,?)");
+              pst = con.prepareStatement("insert into customers(customerName,customerSurname,username,password,address,city,postalCode,country)values(?,?,?,?,?,?,?,?)");
               pst.setString(1, name);
               pst.setString(2, surname);
               pst.setString(3, username);
               pst.setString(4, password);
-              pst.setString(5, rpass);
-              pst.setString(6, address);
-              pst.setString(7, city);
-              pst.setString(8, postalcode);
-              pst.setString(9, country); 
+             
+              pst.setString(5, address);
+              pst.setString(6, city);
+              pst.setString(7, postalcode);
+              pst.setString(8, country); 
               pst.executeUpdate();
               
               JOptionPane.showMessageDialog(this,"User Created");
@@ -648,9 +646,9 @@ public class SignUpPage extends javax.swing.JFrame {
     private javax.swing.JTextField txtcity;
     private javax.swing.JTextField txtcountry;
     public static javax.swing.JTextField txtname;
-    private javax.swing.JTextField txtpass;
-    private javax.swing.JTextField txtphone;
+    private javax.swing.JPasswordField txtpass;
     private javax.swing.JTextField txtpost;
+    private javax.swing.JPasswordField txtrpass;
     public static javax.swing.JTextField txtsurname;
     private javax.swing.JTextField txtuser;
     // End of variables declaration//GEN-END:variables
