@@ -308,10 +308,10 @@ public class UserPage extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel4MouseClicked
 
     private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
-        
+        String database= DatabasePage.txtdata.getText();
      try {
          Class.forName("com.mysql.cj.jdbc.Driver");
-         con=DriverManager.getConnection("jdbc:mysql://localhost/gdprv1.0","root","");
+         con=DriverManager.getConnection("jdbc:mysql://localhost/"+database,"root","");
          pst=con.prepareStatement("select count(customerid) from customers");
          rs=pst.executeQuery();
          
@@ -341,7 +341,7 @@ public class UserPage extends javax.swing.JFrame {
          try {
              
          Class.forName("com.mysql.cj.jdbc.Driver");
-         con=DriverManager.getConnection("jdbc:mysql://localhost/gdprv1.0","root","");
+         con=DriverManager.getConnection("jdbc:mysql://localhost/"+database,"root","");
          
         
          String Username =LoginPage.txtuser.getText();
@@ -366,13 +366,16 @@ public class UserPage extends javax.swing.JFrame {
              
              if (rs1_2.next())
              {
-             float sum = rs.getInt("count(customerid)");  
-             float sumname = rs1_2.getInt("count(customerName)");
+            float sum =  rs.getInt("count(customerid)");  
+             float sumname =  rs1_2.getInt("count(customerName)");
             float name =((sum - sumname)/sum) * 100;
             
+            int sum1=(int) sum ;
+            int sumname1=(int) sumname ;
+            
              String b = "The probability of attack on Name is: "  +name +"%" ; 
-             String c = "Users of the database are: " +sum ;
-             String d = "The count of Users with the same Name are: " +sumname ; 
+             String c = "Users of the database are: " +sum1 ;
+             String d = "The count of Users with the same Name are: " +sumname1 ; 
              String e = "The name is: " + cm ;
              String metric;
              
@@ -409,7 +412,7 @@ public class UserPage extends javax.swing.JFrame {
              {
                  metric= "The risk is " +name +". " + "Releasing these data will result in high privacy risk!";
                   
-                int risk = JOptionPane.showConfirmDialog(null,metric, "Are you sure you want to disclose your personala data?",JOptionPane.ERROR_MESSAGE,JOptionPane.YES_NO_OPTION);
+                int risk = JOptionPane.showConfirmDialog(null,metric, "Attention! Are you sure you want to disclose your personala data?",JOptionPane.ERROR_MESSAGE,JOptionPane.YES_NO_OPTION);
                 if (risk == JOptionPane.YES_OPTION)
                 {
              ResultPage a =new ResultPage();
@@ -470,7 +473,7 @@ public class UserPage extends javax.swing.JFrame {
        try {
             
          Class.forName("com.mysql.cj.jdbc.Driver");
-         con=DriverManager.getConnection("jdbc:mysql://localhost/gdprv1.0","root","");
+         con=DriverManager.getConnection("jdbc:mysql://localhost/" +database,"root","");
          
          
          String Username =LoginPage.txtuser.getText();
@@ -579,7 +582,7 @@ public class UserPage extends javax.swing.JFrame {
           String Username =LoginPage.txtuser.getText();
           try {
          Class.forName("com.mysql.cj.jdbc.Driver");
-         con=DriverManager.getConnection("jdbc:mysql://localhost/gdprv1.0","root","");
+         con=DriverManager.getConnection("jdbc:mysql://localhost/" +database,"root","");
          pst=con.prepareStatement("select count(customerid) from customers");
          rs=pst.executeQuery();
          pst3=con.prepareStatement("select city from customers where username=?");
@@ -681,7 +684,7 @@ public class UserPage extends javax.swing.JFrame {
          String Username =LoginPage.txtuser.getText();
            try {
          Class.forName("com.mysql.cj.jdbc.Driver");
-         con=DriverManager.getConnection("jdbc:mysql://localhost/gdprv1.0","root","");
+         con=DriverManager.getConnection("jdbc:mysql://localhost/" + database,"root","");
         
           pst=con.prepareStatement("select count(customerid) from customers");
          rs=pst.executeQuery();
@@ -783,7 +786,7 @@ public class UserPage extends javax.swing.JFrame {
           String Username =LoginPage.txtuser.getText();
            try {
          Class.forName("com.mysql.cj.jdbc.Driver");
-         con=DriverManager.getConnection("jdbc:mysql://localhost/gdprv1.0","root","");
+         con=DriverManager.getConnection("jdbc:mysql://localhost/" + database,"root","");
         
          pst=con.prepareStatement("select count(customerid) from customers");
          rs=pst.executeQuery();
@@ -891,7 +894,7 @@ public class UserPage extends javax.swing.JFrame {
          String Username =LoginPage.txtuser.getText();
            try {
          Class.forName("com.mysql.cj.jdbc.Driver");
-         con=DriverManager.getConnection("jdbc:mysql://localhost/gdprv1.0","root","");
+         con=DriverManager.getConnection("jdbc:mysql://localhost/" +database,"root","");
         
           pst=con.prepareStatement("select count(customerid) from customers");
          rs=pst.executeQuery();

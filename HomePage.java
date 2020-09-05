@@ -55,8 +55,9 @@ public class HomePage extends javax.swing.JFrame {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
+        database = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -174,7 +175,7 @@ public class HomePage extends javax.swing.JFrame {
         jLabel6.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_exit_30px_2.png"))); // NOI18N
-        jLabel6.setText("  Exit");
+        jLabel6.setText(" Exit");
         jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel6MouseClicked(evt);
@@ -187,19 +188,19 @@ public class HomePage extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_login_30px_1.png"))); // NOI18N
-        jLabel7.setText("  Log in");
-        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+        database.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        database.setForeground(new java.awt.Color(255, 255, 255));
+        database.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_database_30px.png"))); // NOI18N
+        database.setText("Add Database");
+        database.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel7MouseClicked(evt);
+                databaseMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel7MouseEntered(evt);
+                databaseMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel7MouseExited(evt);
+                databaseMouseExited(evt);
             }
         });
 
@@ -219,40 +220,63 @@ public class HomePage extends javax.swing.JFrame {
             }
         });
 
+        jLabel8.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_login_30px_1.png"))); // NOI18N
+        jLabel8.setText("  Log in");
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                jLabel8MouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                jLabel8MouseExited(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(82, 82, 82)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel5)
-                            .addComponent(jLabel11)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel4)))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(49, 49, 49)
-                        .addComponent(jLabel2)))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(82, 82, 82)
+                            .addComponent(jLabel6))
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGap(49, 49, 49)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel2Layout.createSequentialGroup()
+                                    .addGap(10, 10, 10)
+                                    .addComponent(jLabel4))
+                                .addComponent(jLabel2))))
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(database, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel11)
+                        .addComponent(jLabel5)))
                 .addContainerGap(49, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel4)
-                .addGap(33, 33, 33)
-                .addComponent(jLabel7)
-                .addGap(30, 30, 30)
+                .addGap(27, 27, 27)
+                .addComponent(database)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
+                .addComponent(jLabel8)
+                .addGap(26, 26, 26)
                 .addComponent(jLabel11)
-                .addGap(29, 29, 29)
+                .addGap(28, 28, 28)
                 .addComponent(jLabel5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 70, Short.MAX_VALUE)
+                .addGap(63, 63, 63)
                 .addComponent(jLabel6)
-                .addGap(62, 62, 62))
+                .addGap(32, 32, 32))
         );
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
@@ -279,13 +303,13 @@ public class HomePage extends javax.swing.JFrame {
        }
     }//GEN-LAST:event_jLabel6MouseClicked
 
-    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+    private void databaseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_databaseMouseClicked
        close();
-        LoginPage Info = new LoginPage();
+        DatabasePage Info = new DatabasePage();
        Info.setVisible(true);
        
            
-    }//GEN-LAST:event_jLabel7MouseClicked
+    }//GEN-LAST:event_databaseMouseClicked
 
     private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
          mousepX = evt.getX();
@@ -307,13 +331,13 @@ public class HomePage extends javax.swing.JFrame {
         jLabel4.setForeground(new java.awt.Color(255,255,255));
     }//GEN-LAST:event_jLabel4MouseExited
 
-    private void jLabel7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseEntered
-          jLabel7.setForeground(new java.awt.Color(42, 60, 76));
-    }//GEN-LAST:event_jLabel7MouseEntered
+    private void databaseMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_databaseMouseEntered
+          database.setForeground(new java.awt.Color(42, 60, 76));
+    }//GEN-LAST:event_databaseMouseEntered
 
-    private void jLabel7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseExited
-      jLabel7.setForeground(new java.awt.Color(255,255,255));
-    }//GEN-LAST:event_jLabel7MouseExited
+    private void databaseMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_databaseMouseExited
+      database.setForeground(new java.awt.Color(255,255,255));
+    }//GEN-LAST:event_databaseMouseExited
 
     private void jLabel5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseEntered
          jLabel5.setForeground(new java.awt.Color(42, 60, 76));
@@ -352,6 +376,20 @@ public class HomePage extends javax.swing.JFrame {
        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
                                        
     }//GEN-LAST:event_jLabel11MouseExited
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+        LoginPage b = new LoginPage();
+        b.setVisible(true);
+        close();
+    }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jLabel8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseEntered
+        jLabel8.setForeground(new java.awt.Color(42, 60, 76));
+    }//GEN-LAST:event_jLabel8MouseEntered
+
+    private void jLabel8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseExited
+         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
+    }//GEN-LAST:event_jLabel8MouseExited
 
     /**
      * @param args the command line arguments
@@ -392,6 +430,7 @@ public class HomePage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel database;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -401,7 +440,7 @@ public class HomePage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

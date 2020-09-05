@@ -407,6 +407,7 @@ public class LoginPage extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        String database= DatabasePage.txtdata.getText();
         String username = txtuser.getText();
         String password= txtpass.getText();
          if(username.equals("") || password.equals("")){
@@ -415,7 +416,7 @@ public class LoginPage extends javax.swing.JFrame {
          else{
           try {        
               Class.forName("com.mysql.cj.jdbc.Driver");
-              con = DriverManager.getConnection("jdbc:mysql://localhost/gdprv1.0","root","");
+              con = DriverManager.getConnection("jdbc:mysql://localhost/"+database,"root","");
               pst = con.prepareStatement("select * from customers where username=? and password=? ");
               pst.setString(1, username);
               pst.setString(2, password);

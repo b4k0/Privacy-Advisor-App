@@ -337,15 +337,16 @@ public class SignUpPage extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(txtcountry, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(280, 280, 280))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(51, 51, 51)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jLabel23)
                             .addComponent(jLabel22))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(271, 271, 271)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
                     .addComponent(jLabel12))
@@ -479,12 +480,25 @@ public class SignUpPage extends javax.swing.JFrame {
         String city = txtcity.getText();
         String postalcode = txtpost.getText();
         String country = txtcountry.getText();
-        
+        String uppercase="(.*[A-Z].*)";
+        String lowercase="(.*[a-z].*)";
+        String numbers = "(.*[0-9].*)";
+        String special = "(.*[,~,!,@,#,$,%,^,&,*,(,),-,_,=,+,[,{,],},|,;,:,<,>,/,?].*$)";
+        boolean valid = true;
         
         if (username.equals("") || name.equals("") || surname.equals("") || password.equals("") || rpass.equals("") || address.equals("") || city.equals("") || postalcode.equals("") || country.equals(""))
         {
             JOptionPane.showMessageDialog(null,"One or more Fields are Blank","Error",JOptionPane.ERROR_MESSAGE);
+        }    
+        else if (password.length()<8 ||  !(password.matches(uppercase)) || !(password.matches(lowercase)) || !(password.matches(numbers)) || !(password.matches(special)))
+                    
+        {
+                valid=false;
+                
+            
+                JOptionPane.showMessageDialog(this, "Password should be more than 8 characters and contain at least 1 upper case, 1 lower case, 1 number and 1 special character!", "Error, make your password stronger and secure your account! ",JOptionPane.ERROR_MESSAGE);
         }
+        
         else if(!password.equals(rpass))
             {
                  JOptionPane.showMessageDialog(null,"Passwords don't match, retype them!","Error", JOptionPane.ERROR_MESSAGE);
