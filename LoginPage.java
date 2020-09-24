@@ -31,9 +31,9 @@ public class LoginPage extends javax.swing.JFrame {
     public LoginPage() {
         initComponents();
         
-       jButton1.setBackground(Color.black);
-       jButton2.setBackground(Color.black);
-       jButton3.setBackground(Color.black);
+       Login.setBackground(Color.black);
+       Reset.setBackground(Color.black);
+       SignUp.setBackground(Color.black);
        setIconImage();
     }
     
@@ -59,18 +59,18 @@ public class LoginPage extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        Back = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         txtpass = new javax.swing.JPasswordField();
         txtuser = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        Login = new javax.swing.JButton();
+        Reset = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
+        SignUp = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        Exit = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -104,6 +104,7 @@ public class LoginPage extends javax.swing.JFrame {
         jLabel12.setText("v1.0");
 
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setForeground(new java.awt.Color(255, 255, 255));
         jPanel3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
                 jPanel3MouseEntered(evt);
@@ -113,17 +114,17 @@ public class LoginPage extends javax.swing.JFrame {
             }
         });
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_back_30px_1.png"))); // NOI18N
-        jLabel3.setText(" ");
-        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+        Back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_back_30px_1.png"))); // NOI18N
+        Back.setText(" ");
+        Back.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel3MouseClicked(evt);
+                BackMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel3MouseEntered(evt);
+                BackMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel3MouseExited(evt);
+                BackMouseExited(evt);
             }
         });
 
@@ -133,14 +134,14 @@ public class LoginPage extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3)
+                .addComponent(Back)
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Back, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
@@ -156,61 +157,61 @@ public class LoginPage extends javax.swing.JFrame {
 
         txtuser.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
-        jButton1.setBackground(new java.awt.Color(255, 255, 255));
-        jButton1.setFont(new java.awt.Font("Segoe UI Semilight", 1, 24)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Login");
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        Login.setBackground(new java.awt.Color(255, 255, 255));
+        Login.setFont(new java.awt.Font("Segoe UI Semilight", 1, 24)); // NOI18N
+        Login.setForeground(new java.awt.Color(255, 255, 255));
+        Login.setText("Login");
+        Login.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton1MouseEntered(evt);
+                LoginMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton1MouseExited(evt);
+                LoginMouseExited(evt);
             }
         });
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Login.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                LoginActionPerformed(evt);
             }
         });
 
-        jButton2.setBackground(new java.awt.Color(255, 255, 255));
-        jButton2.setFont(new java.awt.Font("Segoe UI Semilight", 1, 24)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("Reset");
-        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+        Reset.setBackground(new java.awt.Color(255, 255, 255));
+        Reset.setFont(new java.awt.Font("Segoe UI Semilight", 1, 24)); // NOI18N
+        Reset.setForeground(new java.awt.Color(255, 255, 255));
+        Reset.setText("Reset");
+        Reset.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton2MouseEntered(evt);
+                ResetMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton2MouseExited(evt);
+                ResetMouseExited(evt);
             }
         });
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        Reset.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                ResetActionPerformed(evt);
             }
         });
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         jLabel4.setText("You don't have an account?");
 
-        jButton3.setBackground(new java.awt.Color(255, 255, 255));
-        jButton3.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_user_15px.png"))); // NOI18N
-        jButton3.setText("Sign up");
-        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+        SignUp.setBackground(new java.awt.Color(255, 255, 255));
+        SignUp.setFont(new java.awt.Font("Segoe UI Semilight", 1, 14)); // NOI18N
+        SignUp.setForeground(new java.awt.Color(255, 255, 255));
+        SignUp.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_user_15px.png"))); // NOI18N
+        SignUp.setText("Sign up");
+        SignUp.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton3MouseEntered(evt);
+                SignUpMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton3MouseExited(evt);
+                SignUpMouseExited(evt);
             }
         });
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
+        SignUp.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
+                SignUpActionPerformed(evt);
             }
         });
 
@@ -221,15 +222,16 @@ public class LoginPage extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addGap(85, 85, 85)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(75, 75, 75)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Login, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(47, 47, 47)
-                        .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(Reset, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(144, 144, 144))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 173, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -250,7 +252,7 @@ public class LoginPage extends javax.swing.JFrame {
                 .addGap(71, 71, 71)
                 .addComponent(jLabel4)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(SignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 111, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -271,12 +273,12 @@ public class LoginPage extends javax.swing.JFrame {
                     .addComponent(txtpass, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(36, 36, 36)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(Login, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(Reset, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(19, 19, 19)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
-                    .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(SignUp, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel11)
@@ -290,19 +292,19 @@ public class LoginPage extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/logo_size_invert.jpg"))); // NOI18N
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_exit_30px_2.png"))); // NOI18N
-        jLabel6.setText("Exit");
-        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+        Exit.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        Exit.setForeground(new java.awt.Color(255, 255, 255));
+        Exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_exit_30px_2.png"))); // NOI18N
+        Exit.setText("Exit");
+        Exit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel6MouseClicked(evt);
+                ExitMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel6MouseEntered(evt);
+                ExitMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel6MouseExited(evt);
+                ExitMouseExited(evt);
             }
         });
 
@@ -310,14 +312,6 @@ public class LoginPage extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_login_30px_1.png"))); // NOI18N
         jLabel7.setText("Log in");
-        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel7MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel7MouseExited(evt);
-            }
-        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -328,7 +322,7 @@ public class LoginPage extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(82, 82, 82)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
+                            .addComponent(Exit)
                             .addComponent(jLabel7)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(49, 49, 49)
@@ -342,7 +336,7 @@ public class LoginPage extends javax.swing.JFrame {
                 .addGap(48, 48, 48)
                 .addComponent(jLabel7)
                 .addGap(232, 232, 232)
-                .addComponent(jLabel6)
+                .addComponent(Exit)
                 .addContainerGap(52, Short.MAX_VALUE))
         );
 
@@ -352,7 +346,7 @@ public class LoginPage extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+    private void ExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseClicked
         int a = JOptionPane.showConfirmDialog(this,"Do you want to close the IB App?","Exit",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE );
        if (a == JOptionPane.YES_OPTION)
        {
@@ -363,7 +357,7 @@ public class LoginPage extends javax.swing.JFrame {
            
        }
         
-    }//GEN-LAST:event_jLabel6MouseClicked
+    }//GEN-LAST:event_ExitMouseClicked
 
     private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
          mousepX = evt.getX();
@@ -377,21 +371,13 @@ public class LoginPage extends javax.swing.JFrame {
         this.setLocation(aX-mousepX,aY-mousepY);
     }//GEN-LAST:event_formMouseDragged
 
-    private void jLabel7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseEntered
-          jLabel7.setForeground(new java.awt.Color(42, 60, 76));
-    }//GEN-LAST:event_jLabel7MouseEntered
+    private void ExitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseEntered
+          Exit.setForeground(new java.awt.Color(42, 60, 76));
+    }//GEN-LAST:event_ExitMouseEntered
 
-    private void jLabel7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseExited
-      jLabel7.setForeground(new java.awt.Color(255,255,255));
-    }//GEN-LAST:event_jLabel7MouseExited
-
-    private void jLabel6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseEntered
-          jLabel6.setForeground(new java.awt.Color(42, 60, 76));
-    }//GEN-LAST:event_jLabel6MouseEntered
-
-    private void jLabel6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseExited
-          jLabel6.setForeground(new java.awt.Color(255,255,255));
-    }//GEN-LAST:event_jLabel6MouseExited
+    private void ExitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseExited
+          Exit.setForeground(new java.awt.Color(255,255,255));
+    }//GEN-LAST:event_ExitMouseExited
 
     private void jPanel3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseEntered
            jPanel3.setBackground(new java.awt.Color(42, 60, 76));
@@ -401,21 +387,28 @@ public class LoginPage extends javax.swing.JFrame {
            jPanel3.setBackground(new java.awt.Color(255, 255, 255));
     }//GEN-LAST:event_jPanel3MouseExited
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void ResetActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ResetActionPerformed
         txtuser.setText("");
         txtpass.setText("");
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_ResetActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void LoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginActionPerformed
         String database= DatabasePage.txtdata.getText();
         String username = txtuser.getText();
         String password= txtpass.getText();
+        
+        
          if(username.equals("") || password.equals("")){
              JOptionPane.showMessageDialog(null, "Username or Password are blank!","Error",JOptionPane.ERROR_MESSAGE);
          }
+         else if(database.equals("")){
+             
+             JOptionPane.showMessageDialog(null, "You don't have insert a database name!","Error",JOptionPane.ERROR_MESSAGE);
+             
+         }
          else{
           try {        
-              Class.forName("com.mysql.cj.jdbc.Driver");
+              Class.forName("com.mysql.jdbc.Driver");
               con = DriverManager.getConnection("jdbc:mysql://localhost/"+database,"root","");
               pst = con.prepareStatement("select * from customers where username=? and password=? ");
               pst.setString(1, username);
@@ -477,52 +470,52 @@ public class LoginPage extends javax.swing.JFrame {
         
         
         
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_LoginActionPerformed
 
-    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+    private void BackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackMouseClicked
         close();
         HomePage a = new HomePage();
         a.setVisible(true);
-    }//GEN-LAST:event_jLabel3MouseClicked
+    }//GEN-LAST:event_BackMouseClicked
 
-    private void jLabel3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseEntered
-        jLabel3.setBackground(new java.awt.Color(42, 60, 76));
-    }//GEN-LAST:event_jLabel3MouseEntered
+    private void BackMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackMouseEntered
+        Back.setBackground(new java.awt.Color(42, 60, 76));
+    }//GEN-LAST:event_BackMouseEntered
 
-    private void jLabel3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseExited
+    private void BackMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackMouseExited
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-    }//GEN-LAST:event_jLabel3MouseExited
+    }//GEN-LAST:event_BackMouseExited
 
-    private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
-        jButton1.setBackground(new java.awt.Color(42, 60, 76));
-    }//GEN-LAST:event_jButton1MouseEntered
+    private void LoginMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginMouseEntered
+        Login.setBackground(new java.awt.Color(42, 60, 76));
+    }//GEN-LAST:event_LoginMouseEntered
 
-    private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
-        jButton1.setBackground(new java.awt.Color(0, 0, 0));
-    }//GEN-LAST:event_jButton1MouseExited
+    private void LoginMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginMouseExited
+        Login.setBackground(new java.awt.Color(0, 0, 0));
+    }//GEN-LAST:event_LoginMouseExited
 
-    private void jButton2MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseEntered
-        jButton2.setBackground(new java.awt.Color(42, 60, 76));
-    }//GEN-LAST:event_jButton2MouseEntered
+    private void ResetMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ResetMouseEntered
+        Reset.setBackground(new java.awt.Color(42, 60, 76));
+    }//GEN-LAST:event_ResetMouseEntered
 
-    private void jButton2MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseExited
-       jButton2.setBackground(new java.awt.Color(0, 0, 0));
-    }//GEN-LAST:event_jButton2MouseExited
+    private void ResetMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ResetMouseExited
+       Reset.setBackground(new java.awt.Color(0, 0, 0));
+    }//GEN-LAST:event_ResetMouseExited
 
-    private void jButton3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseEntered
-         jButton3.setBackground(new java.awt.Color(42, 60, 76));
-    }//GEN-LAST:event_jButton3MouseEntered
+    private void SignUpMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SignUpMouseEntered
+         SignUp.setBackground(new java.awt.Color(42, 60, 76));
+    }//GEN-LAST:event_SignUpMouseEntered
 
-    private void jButton3MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseExited
-        jButton3.setBackground(new java.awt.Color(0, 0, 0));
-    }//GEN-LAST:event_jButton3MouseExited
+    private void SignUpMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_SignUpMouseExited
+        SignUp.setBackground(new java.awt.Color(0, 0, 0));
+    }//GEN-LAST:event_SignUpMouseExited
 
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+    private void SignUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SignUpActionPerformed
        close();
        SignUpPage a =new SignUpPage();
        a.setVisible(true);
        
-    }//GEN-LAST:event_jButton3ActionPerformed
+    }//GEN-LAST:event_SignUpActionPerformed
 
     /**
      * @param args the command line arguments
@@ -575,18 +568,18 @@ public class LoginPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JLabel Back;
+    private javax.swing.JLabel Exit;
+    private javax.swing.JButton Login;
+    private javax.swing.JButton Reset;
+    private javax.swing.JButton SignUp;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

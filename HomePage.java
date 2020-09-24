@@ -7,7 +7,12 @@ package privacysecurity;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JOptionPane;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
+import javax.swing.plaf.ColorUIResource;
 
 
 /**
@@ -52,12 +57,12 @@ public class HomePage extends javax.swing.JFrame {
         jLabel23 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        database = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        HomePage = new javax.swing.JLabel();
+        AboutUsPage = new javax.swing.JLabel();
+        Exit = new javax.swing.JLabel();
+        DatabasePage = new javax.swing.JLabel();
+        HelpPage = new javax.swing.JLabel();
+        LoginPage = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -140,99 +145,99 @@ public class HomePage extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/logo_size_invert.jpg"))); // NOI18N
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_home_30px_1.png"))); // NOI18N
-        jLabel4.setText("  Home");
-        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+        HomePage.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        HomePage.setForeground(new java.awt.Color(255, 255, 255));
+        HomePage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_home_30px_1.png"))); // NOI18N
+        HomePage.setText("  Home");
+        HomePage.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel4MouseClicked(evt);
+                HomePageMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel4MouseEntered(evt);
+                HomePageMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel4MouseExited(evt);
+                HomePageMouseExited(evt);
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_info_30px_4.png"))); // NOI18N
-        jLabel5.setText("About us");
-        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+        AboutUsPage.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        AboutUsPage.setForeground(new java.awt.Color(255, 255, 255));
+        AboutUsPage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_info_30px_4.png"))); // NOI18N
+        AboutUsPage.setText("About us");
+        AboutUsPage.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel5MouseClicked(evt);
+                AboutUsPageMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel5MouseEntered(evt);
+                AboutUsPageMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel5MouseExited(evt);
+                AboutUsPageMouseExited(evt);
             }
         });
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_exit_30px_2.png"))); // NOI18N
-        jLabel6.setText(" Exit");
-        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+        Exit.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        Exit.setForeground(new java.awt.Color(255, 255, 255));
+        Exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_exit_30px_2.png"))); // NOI18N
+        Exit.setText(" Exit");
+        Exit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel6MouseClicked(evt);
+                ExitMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel6MouseEntered(evt);
+                ExitMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel6MouseExited(evt);
+                ExitMouseExited(evt);
             }
         });
 
-        database.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        database.setForeground(new java.awt.Color(255, 255, 255));
-        database.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_database_30px.png"))); // NOI18N
-        database.setText("Add Database");
-        database.addMouseListener(new java.awt.event.MouseAdapter() {
+        DatabasePage.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        DatabasePage.setForeground(new java.awt.Color(255, 255, 255));
+        DatabasePage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_database_30px.png"))); // NOI18N
+        DatabasePage.setText("Add Database");
+        DatabasePage.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                databaseMouseClicked(evt);
+                DatabasePageMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                databaseMouseEntered(evt);
+                DatabasePageMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                databaseMouseExited(evt);
+                DatabasePageMouseExited(evt);
             }
         });
 
-        jLabel11.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_help_30px.png"))); // NOI18N
-        jLabel11.setText("   Help");
-        jLabel11.addMouseListener(new java.awt.event.MouseAdapter() {
+        HelpPage.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        HelpPage.setForeground(new java.awt.Color(255, 255, 255));
+        HelpPage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_help_30px.png"))); // NOI18N
+        HelpPage.setText("   Help");
+        HelpPage.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel11MouseClicked(evt);
+                HelpPageMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel11MouseEntered(evt);
+                HelpPageMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel11MouseExited(evt);
+                HelpPageMouseExited(evt);
             }
         });
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_login_30px_1.png"))); // NOI18N
-        jLabel8.setText("  Log in");
-        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+        LoginPage.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        LoginPage.setForeground(new java.awt.Color(255, 255, 255));
+        LoginPage.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_login_30px_1.png"))); // NOI18N
+        LoginPage.setText("  Log in");
+        LoginPage.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel8MouseClicked(evt);
+                LoginPageMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel8MouseEntered(evt);
+                LoginPageMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel8MouseExited(evt);
+                LoginPageMouseExited(evt);
             }
         });
 
@@ -245,19 +250,19 @@ public class HomePage extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel2Layout.createSequentialGroup()
                             .addGap(82, 82, 82)
-                            .addComponent(jLabel6))
+                            .addComponent(Exit))
                         .addGroup(jPanel2Layout.createSequentialGroup()
                             .addGap(49, 49, 49)
                             .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addGroup(jPanel2Layout.createSequentialGroup()
                                     .addGap(10, 10, 10)
-                                    .addComponent(jLabel4))
+                                    .addComponent(HomePage))
                                 .addComponent(jLabel2))))
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(database, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jLabel11)
-                        .addComponent(jLabel5)))
+                        .addComponent(LoginPage, javax.swing.GroupLayout.PREFERRED_SIZE, 103, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(DatabasePage, javax.swing.GroupLayout.PREFERRED_SIZE, 157, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(HelpPage)
+                        .addComponent(AboutUsPage)))
                 .addContainerGap(49, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
@@ -265,17 +270,17 @@ public class HomePage extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel4)
+                .addComponent(HomePage)
                 .addGap(27, 27, 27)
-                .addComponent(database)
+                .addComponent(DatabasePage)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 30, Short.MAX_VALUE)
-                .addComponent(jLabel8)
+                .addComponent(LoginPage)
                 .addGap(26, 26, 26)
-                .addComponent(jLabel11)
+                .addComponent(HelpPage)
                 .addGap(28, 28, 28)
-                .addComponent(jLabel5)
+                .addComponent(AboutUsPage)
                 .addGap(63, 63, 63)
-                .addComponent(jLabel6)
+                .addComponent(Exit)
                 .addGap(32, 32, 32))
         );
 
@@ -285,15 +290,19 @@ public class HomePage extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+    private void HomePageMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomePageMouseClicked
        close();
         HomePage a = new HomePage();
         a.setVisible(true);
-    }//GEN-LAST:event_jLabel4MouseClicked
+    }//GEN-LAST:event_HomePageMouseClicked
 
-    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+    private void ExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseClicked
+ 
+ 
         int a = JOptionPane.showConfirmDialog(this,"Do you want to close the IB App?","Exit",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE );
-       if (a == JOptionPane.YES_OPTION)
+       
+
+        if (a == JOptionPane.YES_OPTION)
        {
            System.exit(0);
        }
@@ -301,15 +310,15 @@ public class HomePage extends javax.swing.JFrame {
        {
            
        }
-    }//GEN-LAST:event_jLabel6MouseClicked
+    }//GEN-LAST:event_ExitMouseClicked
 
-    private void databaseMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_databaseMouseClicked
+    private void DatabasePageMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DatabasePageMouseClicked
        close();
         DatabasePage Info = new DatabasePage();
        Info.setVisible(true);
        
            
-    }//GEN-LAST:event_databaseMouseClicked
+    }//GEN-LAST:event_DatabasePageMouseClicked
 
     private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
          mousepX = evt.getX();
@@ -323,73 +332,73 @@ public class HomePage extends javax.swing.JFrame {
         this.setLocation(aX-mousepX,aY-mousepY);
     }//GEN-LAST:event_formMouseDragged
 
-    private void jLabel4MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseEntered
-    jLabel4.setForeground(new java.awt.Color(42, 60, 76));
-    }//GEN-LAST:event_jLabel4MouseEntered
+    private void HomePageMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomePageMouseEntered
+    HomePage.setForeground(new java.awt.Color(42, 60, 76));
+    }//GEN-LAST:event_HomePageMouseEntered
 
-    private void jLabel4MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseExited
-        jLabel4.setForeground(new java.awt.Color(255,255,255));
-    }//GEN-LAST:event_jLabel4MouseExited
+    private void HomePageMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HomePageMouseExited
+        HomePage.setForeground(new java.awt.Color(255,255,255));
+    }//GEN-LAST:event_HomePageMouseExited
 
-    private void databaseMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_databaseMouseEntered
-          database.setForeground(new java.awt.Color(42, 60, 76));
-    }//GEN-LAST:event_databaseMouseEntered
+    private void DatabasePageMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DatabasePageMouseEntered
+          DatabasePage.setForeground(new java.awt.Color(42, 60, 76));
+    }//GEN-LAST:event_DatabasePageMouseEntered
 
-    private void databaseMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_databaseMouseExited
-      database.setForeground(new java.awt.Color(255,255,255));
-    }//GEN-LAST:event_databaseMouseExited
+    private void DatabasePageMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_DatabasePageMouseExited
+      DatabasePage.setForeground(new java.awt.Color(255,255,255));
+    }//GEN-LAST:event_DatabasePageMouseExited
 
-    private void jLabel5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseEntered
-         jLabel5.setForeground(new java.awt.Color(42, 60, 76));
-    }//GEN-LAST:event_jLabel5MouseEntered
+    private void AboutUsPageMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AboutUsPageMouseEntered
+         AboutUsPage.setForeground(new java.awt.Color(42, 60, 76));
+    }//GEN-LAST:event_AboutUsPageMouseEntered
 
-    private void jLabel5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseExited
-        jLabel5.setForeground(new java.awt.Color(255,255,255));
-    }//GEN-LAST:event_jLabel5MouseExited
+    private void AboutUsPageMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AboutUsPageMouseExited
+        AboutUsPage.setForeground(new java.awt.Color(255,255,255));
+    }//GEN-LAST:event_AboutUsPageMouseExited
 
-    private void jLabel6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseEntered
-          jLabel6.setForeground(new java.awt.Color(42, 60, 76));
-    }//GEN-LAST:event_jLabel6MouseEntered
+    private void ExitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseEntered
+          Exit.setForeground(new java.awt.Color(42, 60, 76));
+    }//GEN-LAST:event_ExitMouseEntered
 
-    private void jLabel6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseExited
-          jLabel6.setForeground(new java.awt.Color(255,255,255));
-    }//GEN-LAST:event_jLabel6MouseExited
+    private void ExitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseExited
+          Exit.setForeground(new java.awt.Color(255,255,255));
+    }//GEN-LAST:event_ExitMouseExited
 
-    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+    private void AboutUsPageMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AboutUsPageMouseClicked
         close();
         AboutUsPage a = new AboutUsPage();
         a.setVisible(true);
-    }//GEN-LAST:event_jLabel5MouseClicked
+    }//GEN-LAST:event_AboutUsPageMouseClicked
 
-    private void jLabel11MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseClicked
+    private void HelpPageMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HelpPageMouseClicked
         close();
        HelpPage a = new HelpPage();
         a.setVisible(true);
-    }//GEN-LAST:event_jLabel11MouseClicked
+    }//GEN-LAST:event_HelpPageMouseClicked
 
-    private void jLabel11MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseEntered
-        jLabel11.setForeground(new java.awt.Color(42, 60, 76));
+    private void HelpPageMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HelpPageMouseEntered
+        HelpPage.setForeground(new java.awt.Color(42, 60, 76));
                                        
-    }//GEN-LAST:event_jLabel11MouseEntered
+    }//GEN-LAST:event_HelpPageMouseEntered
 
-    private void jLabel11MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel11MouseExited
-       jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+    private void HelpPageMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_HelpPageMouseExited
+       HelpPage.setForeground(new java.awt.Color(255, 255, 255));
                                        
-    }//GEN-LAST:event_jLabel11MouseExited
+    }//GEN-LAST:event_HelpPageMouseExited
 
-    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+    private void LoginPageMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginPageMouseClicked
         LoginPage b = new LoginPage();
         b.setVisible(true);
         close();
-    }//GEN-LAST:event_jLabel8MouseClicked
+    }//GEN-LAST:event_LoginPageMouseClicked
 
-    private void jLabel8MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseEntered
-        jLabel8.setForeground(new java.awt.Color(42, 60, 76));
-    }//GEN-LAST:event_jLabel8MouseEntered
+    private void LoginPageMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginPageMouseEntered
+        LoginPage.setForeground(new java.awt.Color(42, 60, 76));
+    }//GEN-LAST:event_LoginPageMouseEntered
 
-    private void jLabel8MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseExited
-         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-    }//GEN-LAST:event_jLabel8MouseExited
+    private void LoginPageMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LoginPageMouseExited
+         LoginPage.setForeground(new java.awt.Color(255, 255, 255));
+    }//GEN-LAST:event_LoginPageMouseExited
 
     /**
      * @param args the command line arguments
@@ -430,17 +439,17 @@ public class HomePage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel database;
+    private javax.swing.JLabel AboutUsPage;
+    private javax.swing.JLabel DatabasePage;
+    private javax.swing.JLabel Exit;
+    private javax.swing.JLabel HelpPage;
+    private javax.swing.JLabel HomePage;
+    private javax.swing.JLabel LoginPage;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

@@ -55,11 +55,11 @@ public class AboutUsPage extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jLabel7 = new javax.swing.JLabel();
+        Back = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        Exit = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -119,17 +119,17 @@ public class AboutUsPage extends javax.swing.JFrame {
             }
         });
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_back_30px_1.png"))); // NOI18N
-        jLabel7.setText(" ");
-        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+        Back.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_back_30px_1.png"))); // NOI18N
+        Back.setText(" ");
+        Back.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel7MouseClicked(evt);
+                BackMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel7MouseEntered(evt);
+                BackMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel7MouseExited(evt);
+                BackMouseExited(evt);
             }
         });
 
@@ -139,14 +139,14 @@ public class AboutUsPage extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel7)
+                .addComponent(Back)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(Back, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -216,28 +216,20 @@ public class AboutUsPage extends javax.swing.JFrame {
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_info_30px_4.png"))); // NOI18N
         jLabel5.setText("About us");
-        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel5MouseEntered(evt);
-            }
-            public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel5MouseExited(evt);
-            }
-        });
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_exit_30px_2.png"))); // NOI18N
-        jLabel6.setText("  Exit");
-        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+        Exit.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        Exit.setForeground(new java.awt.Color(255, 255, 255));
+        Exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_exit_30px_2.png"))); // NOI18N
+        Exit.setText("  Exit");
+        Exit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel6MouseClicked(evt);
+                ExitMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel6MouseEntered(evt);
+                ExitMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel6MouseExited(evt);
+                ExitMouseExited(evt);
             }
         });
 
@@ -250,7 +242,7 @@ public class AboutUsPage extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(82, 82, 82)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
+                            .addComponent(Exit)
                             .addComponent(jLabel5)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(49, 49, 49)
@@ -264,7 +256,7 @@ public class AboutUsPage extends javax.swing.JFrame {
                 .addGap(43, 43, 43)
                 .addComponent(jLabel5)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 230, Short.MAX_VALUE)
-                .addComponent(jLabel6)
+                .addComponent(Exit)
                 .addGap(62, 62, 62))
         );
 
@@ -274,7 +266,7 @@ public class AboutUsPage extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+    private void ExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseClicked
         int a = JOptionPane.showConfirmDialog(this,"Do you want to close the IB App?","Exit",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE );
        if (a == JOptionPane.YES_OPTION)
        {
@@ -284,7 +276,7 @@ public class AboutUsPage extends javax.swing.JFrame {
        {
            
        }
-    }//GEN-LAST:event_jLabel6MouseClicked
+    }//GEN-LAST:event_ExitMouseClicked
 
     private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
          mousepX = evt.getX();
@@ -298,35 +290,27 @@ public class AboutUsPage extends javax.swing.JFrame {
         this.setLocation(aX-mousepX,aY-mousepY);
     }//GEN-LAST:event_formMouseDragged
 
-    private void jLabel5MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseEntered
-         jLabel5.setForeground(new java.awt.Color(42, 60, 76));
-    }//GEN-LAST:event_jLabel5MouseEntered
+    private void ExitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseEntered
+          Exit.setForeground(new java.awt.Color(42, 60, 76));
+    }//GEN-LAST:event_ExitMouseEntered
 
-    private void jLabel5MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseExited
-        jLabel5.setForeground(new java.awt.Color(255,255,255));
-    }//GEN-LAST:event_jLabel5MouseExited
+    private void ExitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseExited
+          Exit.setForeground(new java.awt.Color(255,255,255));
+    }//GEN-LAST:event_ExitMouseExited
 
-    private void jLabel6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseEntered
-          jLabel6.setForeground(new java.awt.Color(42, 60, 76));
-    }//GEN-LAST:event_jLabel6MouseEntered
-
-    private void jLabel6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseExited
-          jLabel6.setForeground(new java.awt.Color(255,255,255));
-    }//GEN-LAST:event_jLabel6MouseExited
-
-    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+    private void BackMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackMouseClicked
         close();
         HomePage a = new HomePage();
         a.setVisible(true);
-    }//GEN-LAST:event_jLabel7MouseClicked
+    }//GEN-LAST:event_BackMouseClicked
 
-    private void jLabel7MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseEntered
+    private void BackMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackMouseEntered
         jLabel3.setBackground(new java.awt.Color(42, 60, 76));
-    }//GEN-LAST:event_jLabel7MouseEntered
+    }//GEN-LAST:event_BackMouseEntered
 
-    private void jLabel7MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseExited
+    private void BackMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_BackMouseExited
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-    }//GEN-LAST:event_jLabel7MouseExited
+    }//GEN-LAST:event_BackMouseExited
 
     private void jPanel3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseEntered
         jPanel3.setBackground(new java.awt.Color(42, 60, 76));
@@ -379,6 +363,8 @@ public class AboutUsPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel Back;
+    private javax.swing.JLabel Exit;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -389,8 +375,6 @@ public class AboutUsPage extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;

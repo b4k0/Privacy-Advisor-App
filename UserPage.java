@@ -17,6 +17,7 @@ import java.util.logging.Logger;
 import javax.swing.JOptionPane;
 
 
+
 /**
  *
  * @author user
@@ -36,11 +37,11 @@ public class UserPage extends javax.swing.JFrame {
     }
     void user(String username)
     {
-        jLabel8.setText(username);
+        Name.setText(username);
     }
     void userna(String ka)
     {
-        jLabel8.setText(ka);
+        Name.setText(ka);
     }
     
     
@@ -65,15 +66,15 @@ public class UserPage extends javax.swing.JFrame {
         jLabel12 = new javax.swing.JLabel();
         jLabel23 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
-        jLabel3 = new javax.swing.JLabel();
+        LogOut = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jComboBox1 = new javax.swing.JComboBox<>();
         jLabel5 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        AttackProb = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
+        Exit = new javax.swing.JLabel();
+        Name = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -120,13 +121,13 @@ public class UserPage extends javax.swing.JFrame {
         });
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_logout_rounded_left_50px.png"))); // NOI18N
-        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+        LogOut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_logout_rounded_left_50px.png"))); // NOI18N
+        LogOut.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel3MouseClicked(evt);
+                LogOutMouseClicked(evt);
             }
         });
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 49, 46));
+        jPanel3.add(LogOut, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 49, 46));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         jLabel4.setText("Logout");
@@ -154,23 +155,28 @@ public class UserPage extends javax.swing.JFrame {
         jLabel5.setText("Search by");
         jPanel1.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 200, 160, 50));
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 0));
-        jButton1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Attack Probability");
-        jButton1.setBorder(null);
-        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+        AttackProb.setBackground(new java.awt.Color(0, 0, 0));
+        AttackProb.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        AttackProb.setForeground(new java.awt.Color(255, 255, 255));
+        AttackProb.setText("Attack Probability");
+        AttackProb.setBorder(null);
+        AttackProb.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jButton1MouseClicked(evt);
+                AttackProbMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jButton1MouseEntered(evt);
+                AttackProbMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jButton1MouseExited(evt);
+                AttackProbMouseExited(evt);
             }
         });
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 350, 190, 80));
+        AttackProb.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                AttackProbActionPerformed(evt);
+            }
+        });
+        jPanel1.add(AttackProb, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 350, 190, 80));
 
         getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, -3, 630, 520));
 
@@ -178,25 +184,25 @@ public class UserPage extends javax.swing.JFrame {
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/logo_size_invert.jpg"))); // NOI18N
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_exit_30px_2.png"))); // NOI18N
-        jLabel6.setText("Exit");
-        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+        Exit.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        Exit.setForeground(new java.awt.Color(255, 255, 255));
+        Exit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_exit_30px_2.png"))); // NOI18N
+        Exit.setText("Exit");
+        Exit.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel6MouseClicked(evt);
+                ExitMouseClicked(evt);
             }
             public void mouseEntered(java.awt.event.MouseEvent evt) {
-                jLabel6MouseEntered(evt);
+                ExitMouseEntered(evt);
             }
             public void mouseExited(java.awt.event.MouseEvent evt) {
-                jLabel6MouseExited(evt);
+                ExitMouseExited(evt);
             }
         });
 
-        jLabel8.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_user_30px_1.png"))); // NOI18N
+        Name.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
+        Name.setForeground(new java.awt.Color(255, 255, 255));
+        Name.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_user_30px_1.png"))); // NOI18N
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -207,8 +213,8 @@ public class UserPage extends javax.swing.JFrame {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(82, 82, 82)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel6)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(Exit)
+                            .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGap(49, 49, 49)
                         .addComponent(jLabel2)))
@@ -219,9 +225,9 @@ public class UserPage extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel8)
+                .addComponent(Name)
                 .addGap(274, 274, 274)
-                .addComponent(jLabel6)
+                .addComponent(Exit)
                 .addContainerGap(52, Short.MAX_VALUE))
         );
 
@@ -231,7 +237,7 @@ public class UserPage extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+    private void ExitMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseClicked
         int a = JOptionPane.showConfirmDialog(this,"Do you want to close the IB App?","Exit",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE );
        if (a == JOptionPane.YES_OPTION)
        {
@@ -241,7 +247,7 @@ public class UserPage extends javax.swing.JFrame {
        {
            
        }
-    }//GEN-LAST:event_jLabel6MouseClicked
+    }//GEN-LAST:event_ExitMouseClicked
 
     private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
          mousepX = evt.getX();
@@ -255,15 +261,15 @@ public class UserPage extends javax.swing.JFrame {
         this.setLocation(aX-mousepX,aY-mousepY);
     }//GEN-LAST:event_formMouseDragged
 
-    private void jLabel6MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseEntered
-          jLabel6.setForeground(new java.awt.Color(42, 60, 76));
-    }//GEN-LAST:event_jLabel6MouseEntered
+    private void ExitMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseEntered
+          Exit.setForeground(new java.awt.Color(42, 60, 76));
+    }//GEN-LAST:event_ExitMouseEntered
 
-    private void jLabel6MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseExited
-          jLabel6.setForeground(new java.awt.Color(255,255,255));
-    }//GEN-LAST:event_jLabel6MouseExited
+    private void ExitMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_ExitMouseExited
+          Exit.setForeground(new java.awt.Color(255,255,255));
+    }//GEN-LAST:event_ExitMouseExited
 
-    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+    private void LogOutMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_LogOutMouseClicked
           int a = JOptionPane.showConfirmDialog(this,"Do you want to Exit from your account?","Logout",JOptionPane.YES_NO_OPTION,JOptionPane.QUESTION_MESSAGE);
        if (a==JOptionPane.YES_OPTION)
        {
@@ -275,7 +281,7 @@ public class UserPage extends javax.swing.JFrame {
        {
            
        }
-    }//GEN-LAST:event_jLabel3MouseClicked
+    }//GEN-LAST:event_LogOutMouseClicked
 
     private void jPanel3MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jPanel3MouseEntered
        jPanel3.setBackground(new java.awt.Color(42, 60, 76));
@@ -307,710 +313,651 @@ public class UserPage extends javax.swing.JFrame {
        }
     }//GEN-LAST:event_jLabel4MouseClicked
 
-    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+    private void AttackProbMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AttackProbMouseExited
+        AttackProb.setBackground(new java.awt.Color(0, 0, 0));
+    }//GEN-LAST:event_AttackProbMouseExited
+
+    private void AttackProbMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AttackProbMouseEntered
+        AttackProb.setBackground(new java.awt.Color(42, 60, 76));
+    }//GEN-LAST:event_AttackProbMouseEntered
+
+    private void AttackProbMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_AttackProbMouseClicked
         String database= DatabasePage.txtdata.getText();
-     try {
-         Class.forName("com.mysql.cj.jdbc.Driver");
-         con=DriverManager.getConnection("jdbc:mysql://localhost/"+database,"root","");
-         pst=con.prepareStatement("select count(customerid) from customers");
-         rs=pst.executeQuery();
-         
-         if(rs.next())
-         {
-             int sum = rs.getInt("count(customerid)");
-             
-        
-            
-             
-         }
-    
-     } catch (ClassNotFoundException ex) {
-         Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
-     } catch (SQLException ex) {
-         Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
-     }
-     
-    
-     
-     
-     
-     
-     if(jComboBox1.getSelectedItem().equals("Name"))
-     {   
-        
-         try {
-             
-         Class.forName("com.mysql.cj.jdbc.Driver");
-         con=DriverManager.getConnection("jdbc:mysql://localhost/"+database,"root","");
-         
-        
-         String Username =LoginPage.txtuser.getText();
-         
-           
-           pst=con.prepareStatement("select count(customerid) from customers");
-          rs=pst.executeQuery(); 
-           pst1=con.prepareStatement("select customerName from customers where username=?");
-          pst1.setString(1, Username);
-          rs1=pst1.executeQuery();
-         
-         
-           
-                     
-            if (rs.next() && rs1.next())
-            {
-              String cm = rs1.getString("customerName");
-             pst1_2=con.prepareStatement("select count(customerName) from customers where customerName=?");
-             pst1_2.setString(1, cm );
-             rs1_2=pst1_2.executeQuery();
-             System.out.println(cm);
-             
-             if (rs1_2.next())
-             {
-            float sum =  rs.getInt("count(customerid)");  
-             float sumname =  rs1_2.getInt("count(customerName)");
-            float name =((sum - sumname)/sum) * 100;
-            
-            int sum1=(int) sum ;
-            int sumname1=(int) sumname ;
-            
-             String b = "The probability of attack on Name is: "  +name +"%" ; 
-             String c = "Users of the database are: " +sum1 ;
-             String d = "The count of Users with the same Name are: " +sumname1 ; 
-             String e = "The name is: " + cm ;
-             String metric;
-             
-             if (name>=0 && name<33 )
-             {
-                 metric="The risk is " +name+". " + "Releasing these data has a negligible privacy risk!" ;
-                 JOptionPane.showMessageDialog(this, metric);
-                 ResultPage a =new ResultPage();
-             a.setVisible(true);
-             this.setVisible(true);
-             this.setVisible(false);
-             a.re(b);
-             a.res(c);
-             a.resu(d);
-             a.resul(e);
-             a.user(Username);
-             }
-             else if(name>=33 && name<66)
-             {
-                
-                  metric="The risk is " +name+". "  + "Releasing these data may result in a significant privacy risk!";
-                   JOptionPane.showMessageDialog(this, metric);
-                   ResultPage a =new ResultPage();
-             a.setVisible(true);
-             this.setVisible(true);
-             this.setVisible(false);
-             a.re(b);
-             a.res(c);
-             a.resu(d);
-             a.resul(e);
-             a.user(Username);
-             }
-             else
-             {
-                 metric= "The risk is " +name +". " + "Releasing these data will result in high privacy risk!";
-                  
-                int risk = JOptionPane.showConfirmDialog(null,metric, "Attention! Are you sure you want to disclose your personala data?",JOptionPane.ERROR_MESSAGE,JOptionPane.YES_NO_OPTION);
-                if (risk == JOptionPane.YES_OPTION)
-                {
-             ResultPage a =new ResultPage();
-             a.setVisible(true);
-             this.setVisible(true);
-             this.setVisible(false);
-             a.re(b);
-             a.res(c);
-             a.resu(d);
-             a.resul(e);
-             a.user(Username);
-                }
-                else
-                {
-                    
-                }
-             }
-             
-             
-             
-             
-             
-             //System.out.println("The probability is :" +sum);
-              //System.out.println("The probability is :" +sumname);
-              // System.out.println("The probability is: " +name+"%");
-            
-             
-             }
-             
-              
-             
-            
-            }
-          
-           
-           
-           
-           
-          
-            
-            
-            
-           
-     } catch (ClassNotFoundException ex) {
-         Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
-     } catch (SQLException ex) {
-         Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
-     }
-         
-      
-          
-         
-         
-         
-     }
-     else if (jComboBox1.getSelectedItem().equals("Address"))
-     {
-       try {
-            
-         Class.forName("com.mysql.cj.jdbc.Driver");
-         con=DriverManager.getConnection("jdbc:mysql://localhost/" +database,"root","");
-         
-         
-         String Username =LoginPage.txtuser.getText();
-         pst=con.prepareStatement("select count(customerid) from customers");
-         rs=pst.executeQuery();
-         pst2=con.prepareStatement("select address from customers where username=? ");
-         pst2.setString(1, Username);
-         rs2=pst2.executeQuery();
-         
-         
-         
-         
-         if(rs.next()&& rs2.next())
-         { 
-            String am = rs2.getString("address");
-            pst2_2 = con.prepareStatement("select count(address) from customers where address=?");
-            pst2_2.setString(1, am);
-            rs2_2=pst2_2.executeQuery();
-            System.out.println(am);
-            
-             
-             if(rs2_2.next())
-             {
-             float sum = rs.getInt("count(customerid)");
-             float sumadd = rs2_2.getInt("count(address)");
-              float add = ((sum - sumadd)/sum) * 100;
-              String b = "The probability of attack on Address is: "   +add +"%";
-             System.out.println("The probability is :" +add +"%");
-             String c = "Users of the database are: " +sum ;
-             String d = "The count of Users with the same Address are: " +sumadd ; 
-             String e = "The Address is: " + am ;
-              
-             String metric;
-             
-             if (add>=0 && add<33 )
-             {
-                 metric="The risk is " +add+". " + "Releasing these data has a negligible privacy risk!" ;
-                 JOptionPane.showMessageDialog(this, metric);
-                 ResultPage a =new ResultPage();
-             a.setVisible(true);
-             this.setVisible(true);
-             this.setVisible(false);
-             a.re(b);
-             a.res(c);
-             a.resu(d);
-             a.resul(e);
-             a.user(Username);
-             }
-             else if(add>=33 && add<66)
-             {
-                
-                  metric="The risk is " +add+". "  + "Releasing these data may result in a significant privacy risk!";
-                   JOptionPane.showMessageDialog(this, metric);
-                   ResultPage a =new ResultPage();
-             a.setVisible(true);
-             this.setVisible(true);
-             this.setVisible(false);
-             a.re(b);
-             a.res(c);
-             a.resu(d);
-             a.resul(e);
-             a.user(Username);
-             }
-             else
-             {
-                 metric= "The risk is " +add +". " + "Releasing these data will result in high privacy risk!";
-                  
-                int risk = JOptionPane.showConfirmDialog(null,metric, "Are you sure you want to disclose your personala data?",JOptionPane.ERROR_MESSAGE,JOptionPane.YES_NO_OPTION);
-                if (risk == JOptionPane.YES_OPTION)
-                {
-             ResultPage a =new ResultPage();
-             a.setVisible(true);
-             this.setVisible(true);
-             this.setVisible(false);
-             a.re(b);
-             a.res(c);
-             a.resu(d);
-             a.resul(e);
-             a.user(Username);
-                }
-                else
-                {
-                    
-                }
-             }
-             
-             
-             
-             
-             
-             
-    
-             
-             } 
-         }
-    
-     } catch (ClassNotFoundException ex) {
-         Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
-     } catch (SQLException ex) {
-         Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
-     }
-     }
-     
-     else if (jComboBox1.getSelectedItem().equals("City"))
-     {
-          String Username =LoginPage.txtuser.getText();
-          try {
-         Class.forName("com.mysql.cj.jdbc.Driver");
-         con=DriverManager.getConnection("jdbc:mysql://localhost/" +database,"root","");
-         pst=con.prepareStatement("select count(customerid) from customers");
-         rs=pst.executeQuery();
-         pst3=con.prepareStatement("select city from customers where username=?");
-         pst3.setString(1, Username);
-         rs3=pst3.executeQuery();
-         
-         
-         
-         if(rs3.next() && rs.next())
-         {
-             String bm = rs3.getString("city");
-             pst3_2=con.prepareStatement("select count(city) from customers where city=?");
-             pst3_2.setString(1, bm);
-             rs3_2=pst3_2.executeQuery();
-             System.out.println(bm);
-             
-            if(rs3_2.next())
-            {
-             float sum = rs.getInt("count(customerid)");
-             float sumcity = rs3_2.getInt("count(city)");
-             float city = ((sum - sumcity)/sum) * 100;
-             System.out.println("The probability is :" +city +"%");
-             String b = "The probability of attack on City is: "  +city +"%";
-             String c = "Users of the database are: " +sum ;
-             String d = "The count of Users with the same City are: " +sumcity ; 
-             String e = "The City is: " +bm ;
-             
-             
-             String metric;
-             
-             if (city>=0 && city<33 )
-             {
-                 metric="The risk is " +city+". " + "Releasing these data has a negligible privacy risk!" ;
-                 JOptionPane.showMessageDialog(this, metric);
-                 ResultPage a =new ResultPage();
-             a.setVisible(true);
-             this.setVisible(true);
-             this.setVisible(false);
-             a.re(b);
-             a.res(c);
-             a.resu(d);
-             a.resul(e);
-             a.user(Username);
-             }
-             else if(city>=33 && city<66)
-             {
-                
-                  metric="The risk is " +city+". "  + "Releasing these data may result in a significant privacy risk!";
-                   JOptionPane.showMessageDialog(this, metric);
-                   ResultPage a =new ResultPage();
-             a.setVisible(true);
-             this.setVisible(true);
-             this.setVisible(false);
-             a.re(b);
-             a.res(c);
-             a.resu(d);
-             a.resul(e);
-             a.user(Username);
-             }
-             else
-             {
-                 metric= "The risk is " +city+". " + "Releasing these data will result in high privacy risk!";
-                  
-                int risk = JOptionPane.showConfirmDialog(null,metric, "Are you sure you want to disclose your personala data?",JOptionPane.ERROR_MESSAGE,JOptionPane.YES_NO_OPTION);
-                if (risk == JOptionPane.YES_OPTION)
-                {
-             ResultPage a =new ResultPage();
-             a.setVisible(true);
-             this.setVisible(true);
-             this.setVisible(false);
-             a.re(b);
-             a.res(c);
-             a.resu(d);
-             a.resul(e);
-             a.user(Username);
-                }
-                else
-                {
-                    
-                }
-             }
-            }
-           
-             
-             
-             
-         }
-    
-     } catch (ClassNotFoundException ex) {
-         Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
-     } catch (SQLException ex) {
-         Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
-     } 
-     }
-     
-      else if (jComboBox1.getSelectedItem().equals("PostalCode"))
-     {
-         
-         String Username =LoginPage.txtuser.getText();
-           try {
-         Class.forName("com.mysql.cj.jdbc.Driver");
-         con=DriverManager.getConnection("jdbc:mysql://localhost/" + database,"root","");
-        
-          pst=con.prepareStatement("select count(customerid) from customers");
-         rs=pst.executeQuery();
-          pst4=con.prepareStatement("select postalCode from customers where username=? ");
-          pst4.setString(1, Username);
-         rs4=pst4.executeQuery();
-     
-         
-         
-         if(rs4.next() && rs.next())
-         {
-             String dm = rs4.getString("postalCode");
-             pst4_2=con.prepareStatement("select count(postalCode) from customers where postalCode=?");
-             pst4_2.setString(1, dm);
-             rs4_2=pst4_2.executeQuery();
-             System.out.println(dm);
-             
-             if(rs4_2.next())
-             {
-             float sum = rs.getInt("count(customerid)");
-             float sumpc = rs4_2.getInt("count(postalCode)");
-              float pc = ((sum - sumpc)/sum) * 100;
-             System.out.println("The probability is :" +pc +"%");
-             String b = "The probability of attack on  PostalCode is: "  + pc +"%";
-              String c = "Users of the database are: " +sum ;
-             String d = "The count of Users with the same PostalCode are: " +sumpc ; 
-             String e = "The PostalCode is: " +dm ;
-             
-             String metric;
-             
-             if (pc>=0 && pc<33 )
-             {
-                 metric="The risk is " +pc+". " + "Releasing these data has a negligible privacy risk!" ;
-                 JOptionPane.showMessageDialog(this, metric);
-                 ResultPage a =new ResultPage();
-             a.setVisible(true);
-             this.setVisible(true);
-             this.setVisible(false);
-             a.re(b);
-             a.res(c);
-             a.resu(d);
-             a.resul(e);
-             a.user(Username);
-             }
-             else if(pc>=33 && pc<66)
-             {
-                
-                  metric="The risk is " +pc+". "  + "Releasing these data may result in a significant privacy risk!";
-                   JOptionPane.showMessageDialog(this, metric);
-                   ResultPage a =new ResultPage();
-             a.setVisible(true);
-             this.setVisible(true);
-             this.setVisible(false);
-             a.re(b);
-             a.res(c);
-             a.resu(d);
-             a.resul(e);
-             a.user(Username);
-             }
-             else
-             {
-                 metric= "The risk is " +pc+". " + "Releasing these data will result in high privacy risk!";
-                  
-                int risk = JOptionPane.showConfirmDialog(null,metric, "Are you sure you want to disclose your personala data?",JOptionPane.ERROR_MESSAGE,JOptionPane.YES_NO_OPTION);
-                if (risk == JOptionPane.YES_OPTION)
-                {
-             ResultPage a =new ResultPage();
-             a.setVisible(true);
-             this.setVisible(true);
-             this.setVisible(false);
-             a.re(b);
-             a.res(c);
-             a.resu(d);
-             a.resul(e);
-             a.user(Username);
-                }
-                else
-                {
-                    
-                }
-             }
-            }
-           
-             
-           
-             
-           
-           
-         }
-    
-     } catch (ClassNotFoundException ex) {
-         Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
-     } catch (SQLException ex) {
-         Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
-     }
-     }
-      else if (jComboBox1.getSelectedItem().equals("Country"))
-     {
-          String Username =LoginPage.txtuser.getText();
-           try {
-         Class.forName("com.mysql.cj.jdbc.Driver");
-         con=DriverManager.getConnection("jdbc:mysql://localhost/" + database,"root","");
-        
-         pst=con.prepareStatement("select count(customerid) from customers");
-         rs=pst.executeQuery();
-          pst5=con.prepareStatement("select country from customers where username=? ");
-          pst5.setString(1, Username);
-          rs5=pst5.executeQuery();
-          
-         
-         
-         if(rs5.next() && rs.next())
-         {
-             String em = rs5.getString("country");
-             pst5_2=con.prepareStatement("select count(country) from customers where country=?");
-             pst5_2.setString(1, em);
-             rs5_2=pst5_2.executeQuery();
-             
-             
-             
-            if(rs5_2.next())
-            {
-               
-              float sum = rs.getInt("count(customerid)");
-             float sumcountry = rs5_2.getInt("count(country)");
-              float country = ((sum - sumcountry)/sum) * 100;
-             System.out.println("The probability is :" +country +"%");
-             String b = "The probability of attack on Country is: " + country +"%";
-             String c = "Users of the database are: " +sum ;
-             String d = "The count of Users with the same Country are: " +sumcountry ; 
-             String e = "The Country is: " +em ;
-             
-             String metric;
-             
-             if (country>=0 && country<33 )
-             {
-                 metric="The risk is " +country+". " + "Releasing these data has a negligible privacy risk!" ;
-                 JOptionPane.showMessageDialog(this, metric);
-                 ResultPage a =new ResultPage();
-             a.setVisible(true);
-             this.setVisible(true);
-             this.setVisible(false);
-             a.re(b);
-             a.res(c);
-             a.resu(d);
-             a.resul(e);
-             a.user(Username);
-             }
-             else if(country>=33 && country<66)
-             {
-                
-                  metric="The risk is " +country+". "  + "Releasing these data may result in a significant privacy risk!";
-                   JOptionPane.showMessageDialog(this, metric);
-                   ResultPage a =new ResultPage();
-             a.setVisible(true);
-             this.setVisible(true);
-             this.setVisible(false);
-             a.re(b);
-             a.res(c);
-             a.resu(d);
-             a.resul(e);
-             a.user(Username);
-             }
-             else
-             {
-                 metric= "The risk is " +country+". " + "Releasing these data will result in high privacy risk!";
-                  
-                int risk = JOptionPane.showConfirmDialog(null,metric, "Are you sure you want to disclose your personala data?",JOptionPane.ERROR_MESSAGE,JOptionPane.YES_NO_OPTION);
-                if (risk == JOptionPane.YES_OPTION)
-                {
-             ResultPage a =new ResultPage();
-             a.setVisible(true);
-             this.setVisible(true);
-             this.setVisible(false);
-             a.re(b);
-             a.res(c);
-             a.resu(d);
-             a.resul(e);
-             a.user(Username);
-                }
-                else
-                {
-                    
-                }
-             }
-            
-           
-             
-            
-           
-         }
-         
-         
-         }   
-         
-         
-    
-     } catch (ClassNotFoundException ex) {
-         Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
-     } catch (SQLException ex) {
-         Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
-     }
-     }
-         else if (jComboBox1.getSelectedItem().equals("Surname"))
-     {
-         
-         String Username =LoginPage.txtuser.getText();
-           try {
-         Class.forName("com.mysql.cj.jdbc.Driver");
-         con=DriverManager.getConnection("jdbc:mysql://localhost/" +database,"root","");
-        
-          pst=con.prepareStatement("select count(customerid) from customers");
-         rs=pst.executeQuery();
-          pst6=con.prepareStatement("select customerSurname from customers where username=? ");
-          pst6.setString(1, Username);
-         rs6=pst6.executeQuery();
-     
-         
-         
-         if(rs6.next() && rs.next())
-         {
-             String fm = rs6.getString("customerSurname");
-             pst6_2=con.prepareStatement("select count(customerSurname) from customers where customerSurname=?");
-             pst6_2.setString(1, fm);
-             rs6_2=pst6_2.executeQuery();
-             System.out.println(fm);
-             
-             if(rs6_2.next())
-             {
-             float sum = rs.getInt("count(customerid)");
-             float sumsur = rs6_2.getInt("count(customerSurname)");
-              float sur = ((sum - sumsur)/sum) * 100;
-             System.out.println("The probability is :" +sur +"%");
-             String b = "The probability of attack on  Surname is: "  + sur +"%";
-              String c = "Users of the database are: " +sum ;
-             String d = "The count of Users with the same Surname are: " +sumsur ; 
-             String e = "The Surname is: " +fm ;
-             
-             String metric;
-             
-             if (sur>=0 && sur<33 )
-             {
-                 metric="The risk is " +sur+". " + "Releasing these data has a negligible privacy risk!" ;
-                 JOptionPane.showMessageDialog(this, metric);
-                 ResultPage a =new ResultPage();
-             a.setVisible(true);
-             this.setVisible(true);
-             this.setVisible(false);
-             a.re(b);
-             a.res(c);
-             a.resu(d);
-             a.resul(e);
-             a.user(Username);
-             }
-             else if(sur>=33 && sur<66)
-             {
-                
-                  metric="The risk is " +sur+". "  + "Releasing these data may result in a significant privacy risk!";
-                   JOptionPane.showMessageDialog(this, metric);
-                   ResultPage a =new ResultPage();
-             a.setVisible(true);
-             this.setVisible(true);
-             this.setVisible(false);
-             a.re(b);
-             a.res(c);
-             a.resu(d);
-             a.resul(e);
-             a.user(Username);
-             }
-             else
-             {
-                 metric= "The risk is " +sur+". " + "Releasing these data will result in high privacy risk!";
-                  
-                int risk = JOptionPane.showConfirmDialog(null,metric, "Are you sure you want to disclose your personala data?",JOptionPane.ERROR_MESSAGE,JOptionPane.YES_NO_OPTION);
-                if (risk == JOptionPane.YES_OPTION)
-                {
-             ResultPage a =new ResultPage();
-             a.setVisible(true);
-             this.setVisible(true);
-             this.setVisible(false);
-             a.re(b);
-             a.res(c);
-             a.resu(d);
-             a.resul(e);
-             a.user(Username);
-                }
-                else
-                {
-                    
-                }
-             }
-            
-             
-           }
-             
-           
-           
-         }
-    
-     } catch (ClassNotFoundException ex) {
-         Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
-     } catch (SQLException ex) {
-         Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
-     }
-     }
-     else
-     {
-          
-          
-     }
-        
-     
-     
-     
-     
-        
-        
-    }//GEN-LAST:event_jButton1MouseClicked
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            con=DriverManager.getConnection("jdbc:mysql://localhost/"+database,"root","");
+            pst=con.prepareStatement("select count(customerid) from customers");
+            rs=pst.executeQuery();
 
-    private void jButton1MouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseExited
-        jButton1.setBackground(new java.awt.Color(0, 0, 0));
-    }//GEN-LAST:event_jButton1MouseExited
+            if(rs.next())
+            {
+                int sum = rs.getInt("count(customerid)");
 
-    private void jButton1MouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseEntered
-       jButton1.setBackground(new java.awt.Color(42, 60, 76));
-    }//GEN-LAST:event_jButton1MouseEntered
+            }
+
+        } catch (ClassNotFoundException ex) {
+            Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (SQLException ex) {
+            Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        if(jComboBox1.getSelectedItem().equals("Name"))
+        {
+
+            try {
+
+                Class.forName("com.mysql.jdbc.Driver");
+                con=DriverManager.getConnection("jdbc:mysql://localhost/"+database,"root","");
+
+                String Username =LoginPage.txtuser.getText();
+
+                pst=con.prepareStatement("select count(customerid) from customers");
+                rs=pst.executeQuery();
+                pst1=con.prepareStatement("select customerName from customers where username=?");
+                pst1.setString(1, Username);
+                rs1=pst1.executeQuery();
+
+                if (rs.next() && rs1.next())
+                {
+                    String cm = rs1.getString("customerName");
+                    pst1_2=con.prepareStatement("select count(customerName) from customers where customerName=?");
+                    pst1_2.setString(1, cm );
+                    rs1_2=pst1_2.executeQuery();
+                    System.out.println(cm);
+
+                    if (rs1_2.next())
+                    {
+                        float sum =  rs.getInt("count(customerid)");
+                        float sumname =  rs1_2.getInt("count(customerName)");
+                        float name =((sum - sumname)/sum) * 100;
+
+                        int sum1=(int) sum ;
+                        int sumname1=(int) sumname ;
+
+                        String b = "The probability of attack on Name is: "  +name +"%" ;
+                        String c = "Users of the database are: " +sum1 ;
+                        String d = "The count of Users with the same Name are: " +sumname1 ;
+                        String e = "The name is: " + cm ;
+                        String metric;
+
+                        if (name>=0 && name<33 )
+                        {
+                            metric="The risk is " +name+". " + "Releasing these data has a negligible privacy risk!" ;
+                            JOptionPane.showMessageDialog(this, metric);
+                            ResultPage a =new ResultPage();
+                            a.setVisible(true);
+                            this.setVisible(true);
+                            this.setVisible(false);
+                            a.re(b);
+                            a.res(c);
+                            a.resu(d);
+                            a.resul(e);
+                            a.user(Username);
+                        }
+                        else if(name>=33 && name<66)
+                        {
+
+                            metric="The risk is " +name+". "  + "Releasing these data may result in a significant privacy risk!";
+                            JOptionPane.showMessageDialog(this, metric);
+                            ResultPage a =new ResultPage();
+                            a.setVisible(true);
+                            this.setVisible(true);
+                            this.setVisible(false);
+                            a.re(b);
+                            a.res(c);
+                            a.resu(d);
+                            a.resul(e);
+                            a.user(Username);
+                        }
+                        else
+                        {
+                            metric= "The risk is " +name +". " + "Releasing these data will result in high privacy risk!";
+
+                            int risk = JOptionPane.showConfirmDialog(null,metric, "Attention! Are you sure you want to disclose your personala data?",JOptionPane.ERROR_MESSAGE,JOptionPane.YES_NO_OPTION);
+                            if (risk == JOptionPane.YES_OPTION)
+                            {
+                                ResultPage a =new ResultPage();
+                                a.setVisible(true);
+                                this.setVisible(true);
+                                this.setVisible(false);
+                                a.re(b);
+                                a.res(c);
+                                a.resu(d);
+                                a.resul(e);
+                                a.user(Username);
+                            }
+                            else
+                            {
+
+                            }
+                        }
+
+                        //System.out.println("The probability is :" +sum);
+                        //System.out.println("The probability is :" +sumname);
+                        // System.out.println("The probability is: " +name+"%");
+
+                    }
+
+                }
+
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SQLException ex) {
+                Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
+        }
+        else if (jComboBox1.getSelectedItem().equals("Address"))
+        {
+            try {
+
+                Class.forName("com.mysql.jdbc.Driver");
+                con=DriverManager.getConnection("jdbc:mysql://localhost/"+database,"root","");
+
+                String Username =LoginPage.txtuser.getText();
+                pst=con.prepareStatement("select count(customerid) from customers");
+                rs=pst.executeQuery();
+                pst2=con.prepareStatement("select address from customers where username=? ");
+                pst2.setString(1, Username);
+                rs2=pst2.executeQuery();
+
+                if(rs.next()&& rs2.next())
+                {
+                    String am = rs2.getString("address");
+                    pst2_2 = con.prepareStatement("select count(address) from customers where address=?");
+                    pst2_2.setString(1, am);
+                    rs2_2=pst2_2.executeQuery();
+                    System.out.println(am);
+
+                    if(rs2_2.next())
+                    {
+                        float sum = rs.getInt("count(customerid)");
+                        float sumadd = rs2_2.getInt("count(address)");
+                        float add = ((sum - sumadd)/sum) * 100;
+                        
+                        int sum1=(int) sum ;
+                        int sumadd1=(int) sumadd ;
+                        
+                        String b = "The probability of attack on Address is: "   +add +"%";
+                        System.out.println("The probability is :" +add +"%");
+                        String c = "Users of the database are: " +sum1 ;
+                        String d = "The count of Users with the same Address are: " +sumadd1 ;
+                        String e = "The Address is: " + am ;
+
+                        String metric;
+
+                        if (add>=0 && add<33 )
+                        {
+                            metric="The risk is " +add+". " + "Releasing these data has a negligible privacy risk!" ;
+                            JOptionPane.showMessageDialog(this, metric);
+                            ResultPage a =new ResultPage();
+                            a.setVisible(true);
+                            this.setVisible(true);
+                            this.setVisible(false);
+                            a.re(b);
+                            a.res(c);
+                            a.resu(d);
+                            a.resul(e);
+                            a.user(Username);
+                        }
+                        else if(add>=33 && add<66)
+                        {
+
+                            metric="The risk is " +add+". "  + "Releasing these data may result in a significant privacy risk!";
+                            JOptionPane.showMessageDialog(this, metric);
+                            ResultPage a =new ResultPage();
+                            a.setVisible(true);
+                            this.setVisible(true);
+                            this.setVisible(false);
+                            a.re(b);
+                            a.res(c);
+                            a.resu(d);
+                            a.resul(e);
+                            a.user(Username);
+                        }
+                        else
+                        {
+                            metric= "The risk is " +add +". " + "Releasing these data will result in high privacy risk!";
+
+                            int risk = JOptionPane.showConfirmDialog(null,metric, "Are you sure you want to disclose your personala data?",JOptionPane.ERROR_MESSAGE,JOptionPane.YES_NO_OPTION);
+                            if (risk == JOptionPane.YES_OPTION)
+                            {
+                                ResultPage a =new ResultPage();
+                                a.setVisible(true);
+                                this.setVisible(true);
+                                this.setVisible(false);
+                                a.re(b);
+                                a.res(c);
+                                a.resu(d);
+                                a.resul(e);
+                                a.user(Username);
+                            }
+                            else
+                            {
+
+                            }
+                        }
+
+                    }
+                }
+
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SQLException ex) {
+                Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
+        else if (jComboBox1.getSelectedItem().equals("City"))
+        {
+            String Username =LoginPage.txtuser.getText();
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+                con=DriverManager.getConnection("jdbc:mysql://localhost/"+database,"root","");
+                pst=con.prepareStatement("select count(customerid) from customers");
+                rs=pst.executeQuery();
+                pst3=con.prepareStatement("select city from customers where username=?");
+                pst3.setString(1, Username);
+                rs3=pst3.executeQuery();
+
+                if(rs3.next() && rs.next())
+                {
+                    String bm = rs3.getString("city");
+                    pst3_2=con.prepareStatement("select count(city) from customers where city=?");
+                    pst3_2.setString(1, bm);
+                    rs3_2=pst3_2.executeQuery();
+                    System.out.println(bm);
+
+                    if(rs3_2.next())
+                    {
+                        float sum = rs.getInt("count(customerid)");
+                        float sumcity = rs3_2.getInt("count(city)");
+                        float city = ((sum - sumcity)/sum) * 100;
+                        
+                        int sum1=(int) sum ;
+                        int sumcity1=(int) sumcity ;
+                        
+                        System.out.println("The probability is :" +city +"%");
+                        String b = "The probability of attack on City is: "  +city +"%";
+                        String c = "Users of the database are: " +sum1 ;
+                        String d = "The count of Users with the same City are: " +sumcity1 ;
+                        String e = "The City is: " +bm ;
+
+                        String metric;
+
+                        if (city>=0 && city<33 )
+                        {
+                            metric="The risk is " +city+". " + "Releasing these data has a negligible privacy risk!" ;
+                            JOptionPane.showMessageDialog(this, metric);
+                            ResultPage a =new ResultPage();
+                            a.setVisible(true);
+                            this.setVisible(true);
+                            this.setVisible(false);
+                            a.re(b);
+                            a.res(c);
+                            a.resu(d);
+                            a.resul(e);
+                            a.user(Username);
+                        }
+                        else if(city>=33 && city<66)
+                        {
+
+                            metric="The risk is " +city+". "  + "Releasing these data may result in a significant privacy risk!";
+                            JOptionPane.showMessageDialog(this, metric);
+                            ResultPage a =new ResultPage();
+                            a.setVisible(true);
+                            this.setVisible(true);
+                            this.setVisible(false);
+                            a.re(b);
+                            a.res(c);
+                            a.resu(d);
+                            a.resul(e);
+                            a.user(Username);
+                        }
+                        else
+                        {
+                            metric= "The risk is " +city+". " + "Releasing these data will result in high privacy risk!";
+
+                            int risk = JOptionPane.showConfirmDialog(null,metric, "Are you sure you want to disclose your personala data?",JOptionPane.ERROR_MESSAGE,JOptionPane.YES_NO_OPTION);
+                            if (risk == JOptionPane.YES_OPTION)
+                            {
+                                ResultPage a =new ResultPage();
+                                a.setVisible(true);
+                                this.setVisible(true);
+                                this.setVisible(false);
+                                a.re(b);
+                                a.res(c);
+                                a.resu(d);
+                                a.resul(e);
+                                a.user(Username);
+                            }
+                            else
+                            {
+
+                            }
+                        }
+                    }
+
+                }
+
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SQLException ex) {
+                Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+
+        else if (jComboBox1.getSelectedItem().equals("PostalCode"))
+        {
+
+            String Username =LoginPage.txtuser.getText();
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+                con=DriverManager.getConnection("jdbc:mysql://localhost/"+database,"root","");
+
+                pst=con.prepareStatement("select count(customerid) from customers");
+                rs=pst.executeQuery();
+                pst4=con.prepareStatement("select postalCode from customers where username=? ");
+                pst4.setString(1, Username);
+                rs4=pst4.executeQuery();
+
+                if(rs4.next() && rs.next())
+                {
+                    String dm = rs4.getString("postalCode");
+                    pst4_2=con.prepareStatement("select count(postalCode) from customers where postalCode=?");
+                    pst4_2.setString(1, dm);
+                    rs4_2=pst4_2.executeQuery();
+                    System.out.println(dm);
+
+                    if(rs4_2.next())
+                    {
+                        float sum = rs.getInt("count(customerid)");
+                        float sumpc = rs4_2.getInt("count(postalCode)");
+                        float pc = ((sum - sumpc)/sum) * 100;
+                        
+                        int sum1=(int) sum ;
+                        int sumpc1=(int) sumpc ;
+                        
+                        System.out.println("The probability is :" +pc +"%");
+                        String b = "The probability of attack on  PostalCode is: "  + pc +"%";
+                        String c = "Users of the database are: " +sum1 ;
+                        String d = "The count of Users with the same PostalCode are: " +sumpc1 ;
+                        String e = "The PostalCode is: " +dm ;
+
+                        String metric;
+
+                        if (pc>=0 && pc<33 )
+                        {
+                            metric="The risk is " +pc+". " + "Releasing these data has a negligible privacy risk!" ;
+                            JOptionPane.showMessageDialog(this, metric);
+                            ResultPage a =new ResultPage();
+                            a.setVisible(true);
+                            this.setVisible(true);
+                            this.setVisible(false);
+                            a.re(b);
+                            a.res(c);
+                            a.resu(d);
+                            a.resul(e);
+                            a.user(Username);
+                        }
+                        else if(pc>=33 && pc<66)
+                        {
+
+                            metric="The risk is " +pc+". "  + "Releasing these data may result in a significant privacy risk!";
+                            JOptionPane.showMessageDialog(this, metric);
+                            ResultPage a =new ResultPage();
+                            a.setVisible(true);
+                            this.setVisible(true);
+                            this.setVisible(false);
+                            a.re(b);
+                            a.res(c);
+                            a.resu(d);
+                            a.resul(e);
+                            a.user(Username);
+                        }
+                        else
+                        {
+                            metric= "The risk is " +pc+". " + "Releasing these data will result in high privacy risk!";
+
+                            int risk = JOptionPane.showConfirmDialog(null,metric, "Are you sure you want to disclose your personala data?",JOptionPane.ERROR_MESSAGE,JOptionPane.YES_NO_OPTION);
+                            if (risk == JOptionPane.YES_OPTION)
+                            {
+                                ResultPage a =new ResultPage();
+                                a.setVisible(true);
+                                this.setVisible(true);
+                                this.setVisible(false);
+                                a.re(b);
+                                a.res(c);
+                                a.resu(d);
+                                a.resul(e);
+                                a.user(Username);
+                            }
+                            else
+                            {
+
+                            }
+                        }
+                    }
+
+                }
+
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SQLException ex) {
+                Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        else if (jComboBox1.getSelectedItem().equals("Country"))
+        {
+            String Username =LoginPage.txtuser.getText();
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+                con=DriverManager.getConnection("jdbc:mysql://localhost/"+database,"root","");
+
+                pst=con.prepareStatement("select count(customerid) from customers");
+                rs=pst.executeQuery();
+                pst5=con.prepareStatement("select country from customers where username=? ");
+                pst5.setString(1, Username);
+                rs5=pst5.executeQuery();
+
+                if(rs5.next() && rs.next())
+                {
+                    String em = rs5.getString("country");
+                    pst5_2=con.prepareStatement("select count(country) from customers where country=?");
+                    pst5_2.setString(1, em);
+                    rs5_2=pst5_2.executeQuery();
+
+                    if(rs5_2.next())
+                    {
+
+                        float sum = rs.getInt("count(customerid)");
+                        float sumcountry = rs5_2.getInt("count(country)");
+                        float country = ((sum - sumcountry)/sum) * 100;
+                        
+                        int sum1=(int) sum ;
+                        int sumcountry1=(int) sumcountry ;
+                        
+                        System.out.println("The probability is :" +country +"%");
+                        String b = "The probability of attack on Country is: " + country +"%";
+                        String c = "Users of the database are: " +sum1 ;
+                        String d = "The count of Users with the same Country are: " +sumcountry1 ;
+                        String e = "The Country is: " +em ;
+
+                        String metric;
+
+                        if (country>=0 && country<33 )
+                        {
+                            metric="The risk is " +country+". " + "Releasing these data has a negligible privacy risk!" ;
+                            JOptionPane.showMessageDialog(this, metric);
+                            ResultPage a =new ResultPage();
+                            a.setVisible(true);
+                            this.setVisible(true);
+                            this.setVisible(false);
+                            a.re(b);
+                            a.res(c);
+                            a.resu(d);
+                            a.resul(e);
+                            a.user(Username);
+                        }
+                        else if(country>=33 && country<66)
+                        {
+
+                            metric="The risk is " +country+". "  + "Releasing these data may result in a significant privacy risk!";
+                            JOptionPane.showMessageDialog(this, metric);
+                            ResultPage a =new ResultPage();
+                            a.setVisible(true);
+                            this.setVisible(true);
+                            this.setVisible(false);
+                            a.re(b);
+                            a.res(c);
+                            a.resu(d);
+                            a.resul(e);
+                            a.user(Username);
+                        }
+                        else
+                        {
+                            metric= "The risk is " +country+". " + "Releasing these data will result in high privacy risk!";
+
+                            int risk = JOptionPane.showConfirmDialog(null,metric, "Are you sure you want to disclose your personala data?",JOptionPane.ERROR_MESSAGE,JOptionPane.YES_NO_OPTION);
+                            if (risk == JOptionPane.YES_OPTION)
+                            {
+                                ResultPage a =new ResultPage();
+                                a.setVisible(true);
+                                this.setVisible(true);
+                                this.setVisible(false);
+                                a.re(b);
+                                a.res(c);
+                                a.resu(d);
+                                a.resul(e);
+                                a.user(Username);
+                            }
+                            else
+                            {
+
+                            }
+                        }
+
+                    }
+
+                }
+
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SQLException ex) {
+                Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        else if (jComboBox1.getSelectedItem().equals("Surname"))
+        {
+
+            String Username =LoginPage.txtuser.getText();
+            try {
+                Class.forName("com.mysql.jdbc.Driver");
+                con=DriverManager.getConnection("jdbc:mysql://localhost/"+database,"root","");
+
+                pst=con.prepareStatement("select count(customerid) from customers");
+                rs=pst.executeQuery();
+                pst6=con.prepareStatement("select customerSurname from customers where username=? ");
+                pst6.setString(1, Username);
+                rs6=pst6.executeQuery();
+
+                if(rs6.next() && rs.next())
+                {
+                    String fm = rs6.getString("customerSurname");
+                    pst6_2=con.prepareStatement("select count(customerSurname) from customers where customerSurname=?");
+                    pst6_2.setString(1, fm);
+                    rs6_2=pst6_2.executeQuery();
+                    System.out.println(fm);
+
+                    if(rs6_2.next())
+                    {
+                        float sum = rs.getInt("count(customerid)");
+                        float sumsur = rs6_2.getInt("count(customerSurname)");
+                        float sur = ((sum - sumsur)/sum) * 100;
+                        
+                        int sum1=(int) sum ;
+                        int sumsur1=(int) sumsur ;
+                        
+                        System.out.println("The probability is :" +sur +"%");
+                        String b = "The probability of attack on  Surname is: "  + sur +"%";
+                        String c = "Users of the database are: " +sum1 ;
+                        String d = "The count of Users with the same Surname are: " +sumsur1 ;
+                        String e = "The Surname is: " +fm ;
+
+                        String metric;
+
+                        if (sur>=0 && sur<33 )
+                        {
+                            metric="The risk is " +sur+". " + "Releasing these data has a negligible privacy risk!" ;
+                            JOptionPane.showMessageDialog(this, metric);
+                            ResultPage a =new ResultPage();
+                            a.setVisible(true);
+                            this.setVisible(true);
+                            this.setVisible(false);
+                            a.re(b);
+                            a.res(c);
+                            a.resu(d);
+                            a.resul(e);
+                            a.user(Username);
+                        }
+                        else if(sur>=33 && sur<66)
+                        {
+
+                            metric="The risk is " +sur+". "  + "Releasing these data may result in a significant privacy risk!";
+                            JOptionPane.showMessageDialog(this, metric);
+                            ResultPage a =new ResultPage();
+                            a.setVisible(true);
+                            this.setVisible(true);
+                            this.setVisible(false);
+                            a.re(b);
+                            a.res(c);
+                            a.resu(d);
+                            a.resul(e);
+                            a.user(Username);
+                        }
+                        else
+                        {
+                            metric= "The risk is " +sur+". " + "Releasing these data will result in high privacy risk!";
+
+                            int risk = JOptionPane.showConfirmDialog(null,metric, "Are you sure you want to disclose your personala data?",JOptionPane.ERROR_MESSAGE,JOptionPane.YES_NO_OPTION);
+                            if (risk == JOptionPane.YES_OPTION)
+                            {
+                                ResultPage a =new ResultPage();
+                                a.setVisible(true);
+                                this.setVisible(true);
+                                this.setVisible(false);
+                                a.re(b);
+                                a.res(c);
+                                a.resu(d);
+                                a.resul(e);
+                                a.user(Username);
+                            }
+                            else
+                            {
+
+                            }
+                        }
+
+                    }
+
+                }
+
+            } catch (ClassNotFoundException ex) {
+                Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (SQLException ex) {
+                Logger.getLogger(UserPage.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        else
+        {
+
+        }
+
+    }//GEN-LAST:event_AttackProbMouseClicked
+
+    private void AttackProbActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_AttackProbActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_AttackProbActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1051,17 +998,17 @@ public class UserPage extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public static javax.swing.JButton jButton1;
+    public static javax.swing.JButton AttackProb;
+    private javax.swing.JLabel Exit;
+    private javax.swing.JLabel LogOut;
+    public static javax.swing.JLabel Name;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    public static javax.swing.JLabel jLabel8;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
