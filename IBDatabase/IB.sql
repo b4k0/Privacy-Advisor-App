@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Φιλοξενητής: 127.0.0.1
--- Χρόνος δημιουργίας: 01 Οκτ 2020 στις 23:20:20
+-- Χρόνος δημιουργίας: 02 Οκτ 2020 στις 00:41:52
 -- Έκδοση διακομιστή: 10.4.6-MariaDB
 -- Έκδοση PHP: 7.1.31
 
@@ -49,7 +49,7 @@ INSERT INTO `customers` (`customerid`, `customerName`, `customerSurname`, `usern
 (2, 'Giannis', 'Bakopoulos', 'bak', '1996', 'Zaimi', 'Patras', 26223, 'Greece'),
 (3, 'Giannis', 'Papadopoulos', 'pap', '1996', 'Korinthou', 'Patras', 26223, 'Greece'),
 (4, 'Giannis', 'Nikolaou', 'nik', '1996', 'Korinthou', 'Patras', 26223, 'Greece'),
-(5, 'Nikos', 'Kalos', 'nkal', '1996', 'Ermou', 'Patras', 26203, 'Greece'),
+(5, 'Nikos', 'Kalos', 'nkal', '1996', 'Ermou', 'Patras', 26223, 'Greece'),
 (7, 'Kelvin', 'Leong', 'Kelvin', '1996', '7586 Pompton St.', 'Allentown', 70267, 'USA'),
 (14, 'Valarie', 'Franco', 'Braun', '1996', '6251 Ingle Ln.', 'Boston', 51003, 'USA'),
 (15, 'Juri', 'Yoshido', 'Juri', '1996', '8616 Spinnaker Dr.', 'Boston', 51003, 'USA'),
@@ -127,7 +127,24 @@ INSERT INTO `customers` (`customerid`, `customerName`, `customerSurname`, `usern
 (119, 'Giannis', 'Krigos', 'krig2', '2348', 'Ermou', 'Patras', 26223, 'Greece'),
 (120, 'Giannis', 'Lachanos', 'lachg', '1239', 'Korinthou', 'Patras', 26223, 'Greece'),
 (121, 'Giannis', 'Ilias', 'ilgi', '4344', 'Korinthou', 'Patras', 26223, 'Greece'),
-(122, 'Giannis', 'Prokopiou', 'prokopg', '45326', 'Korinthou', 'Patras', 26223, 'Greece');
+(122, 'Giannis', 'Prokopiou', 'prokopg', '45326', 'Korinthou', 'Patras', 26223, 'Greece'),
+(123, 'Nikos', 'Mpak', 'nmpak', '1996', 'Korinthou', 'Patras', 26223, 'Greece'),
+(124, 'Giannis', 'Baklesis', 'bakleg', '1996', 'Zaimi', 'Patras', 26223, 'Greece'),
+(125, 'Giannis', 'Lambrinos', 'lambri', '1996', 'Korinthou', 'Patras', 26223, 'Greece'),
+(126, 'Giannis', 'Nikolakas', 'nikg', '1996', 'Korinthou', 'Patras', 26223, 'Greece'),
+(127, 'Nikos', 'Nikolaou', 'nikolaou', '1996', 'Ermou', 'Patras', 26223, 'Greece'),
+(128, 'Kostas', 'Damidis', 'Kdam', '1996', 'Rotonta', 'Thessaloniki', 23330, 'Greece'),
+(129, 'Panos', 'Zalas', 'pzal', '1996', 'Rotonta', 'Thessaloniki', 23330, 'Greece'),
+(130, 'Michael', 'Lambrou', 'mlamb', '1996', 'Rotonta', 'Thessaloniki', 23330, 'Greece'),
+(131, 'Michael', 'Kotoris', 'mkotor', '1996', 'Aristotelous', 'Thessaloniki', 23330, 'Greece'),
+(132, 'Aris', 'Panou', 'arpan', '1996', 'Aristotelous', 'Thessaloniki', 23330, 'Greece'),
+(133, 'Leslie', 'Kalou', 'lkal', '1996', 'Aristotelous', 'Thessaloniki', 23330, 'Greece'),
+(134, 'Julia', 'Stamati', 'jstam', '1996', 'Aristotelous', 'Thessaloniki', 23330, 'Greece'),
+(135, 'Sam', 'Kaloglou', 'samk', '1996', 'Aristotelous', 'Thessaloniki', 23330, 'Greece'),
+(136, 'George', 'Mpak', 'geompak', '1996', 'Korinthou', 'Patras', 26223, 'Greece'),
+(137, 'Giannis', 'Bakalis', 'bakalis', '1996', 'Zaimi', 'Patras', 26223, 'Greece'),
+(138, 'Giannis', 'Panou', 'panoug', '1996', 'Korinthou', 'Patras', 26223, 'Greece'),
+(139, 'Michael', 'Nikidakis', 'nikidm', '1996', 'Korinthou', 'Patras', 26223, 'Greece');
 
 --
 -- Ευρετήρια για άχρηστους πίνακες
@@ -147,7 +164,7 @@ ALTER TABLE `customers`
 -- AUTO_INCREMENT για πίνακα `customers`
 --
 ALTER TABLE `customers`
-  MODIFY `customerid` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=123;
+  MODIFY `customerid` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=140;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
