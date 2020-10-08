@@ -94,7 +94,7 @@ Connection con;
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
+        Report = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -191,14 +191,14 @@ Connection con;
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_2_40px.png"))); // NOI18N
         jLabel10.setText(" ");
 
-        jButton1.setBackground(new java.awt.Color(0, 0, 0));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("Download Report");
-        jButton1.setBorder(null);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        Report.setBackground(new java.awt.Color(0, 0, 0));
+        Report.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        Report.setForeground(new java.awt.Color(255, 255, 255));
+        Report.setText("Download Report");
+        Report.setBorder(null);
+        Report.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                ReportActionPerformed(evt);
             }
         });
 
@@ -222,7 +222,7 @@ Connection con;
                             .addGap(151, 151, 151)
                             .addComponent(jLabel5)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(Report, javax.swing.GroupLayout.PREFERRED_SIZE, 159, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addGap(44, 44, 44))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
@@ -254,7 +254,7 @@ Connection con;
                         .addComponent(jLabel5))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(33, 33, 33)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(Report, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel12)
@@ -386,7 +386,7 @@ Connection con;
         jPanel3.setBackground(new java.awt.Color(255, 255, 255));
     }//GEN-LAST:event_jPanel3MouseExited
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void ReportActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ReportActionPerformed
        String a= Name.getText();
        String database = DatabasePage.txtdata.getText();
         try {
@@ -424,7 +424,7 @@ param.put("d", jLabel10.getText());
         Logger.getLogger(ResultPage.class.getName()).log(Level.SEVERE, null, ex);
     }
    
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_ReportActionPerformed
 
     /**
      * @param args the command line arguments
@@ -465,12 +465,10 @@ param.put("d", jLabel10.getText());
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public static javax.swing.JButton AttackProb;
-    public static javax.swing.JButton AttackProb1;
     private javax.swing.JLabel Back;
     private javax.swing.JLabel Exit;
     public static javax.swing.JLabel Name;
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton Report;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel12;

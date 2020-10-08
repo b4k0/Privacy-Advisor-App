@@ -147,7 +147,7 @@ public class UserPage extends javax.swing.JFrame {
         jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 0, 70, 90));
 
         jComboBox1.setFont(new java.awt.Font("Segoe UI Semibold", 0, 18)); // NOI18N
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Name", "Surname", "Address", "City", "PostalCode", "Country" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Name", "Surname", "Address", "PostalCode", "City", "Country" }));
         jPanel1.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 210, 130, 30));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
@@ -413,7 +413,7 @@ public class UserPage extends javax.swing.JFrame {
                         {
                             metric= "The risk is " +name +". " + "Releasing these data will result in high privacy risk!";
 
-                            int risk = JOptionPane.showConfirmDialog(null,metric, "Attention! Are you sure you want to disclose your personala data?",JOptionPane.ERROR_MESSAGE,JOptionPane.YES_NO_OPTION);
+                            int risk = JOptionPane.showConfirmDialog(null,metric, "Attention! Are you sure you want to disclose your personal data?",JOptionPane.ERROR_MESSAGE,JOptionPane.YES_NO_OPTION);
                             if (risk == JOptionPane.YES_OPTION)
                             {
                                 ResultPage a =new ResultPage();
@@ -428,7 +428,20 @@ public class UserPage extends javax.swing.JFrame {
                             }
                             else
                             {
-
+                               pst1=con.prepareStatement("update customers set customerName='-' where username=? "); 
+                               pst1.setString(1, Username);
+                               pst1.executeUpdate();
+                               JOptionPane.showMessageDialog(null,"You have not agree to dispose the high risk attack probability and the value has been deleted from our database!");
+                               ResultPage a =new ResultPage();
+                                a.setVisible(true);
+                                this.dispose();
+                                this.setVisible(true);
+                                this.setVisible(false);
+                                a.re(b);
+                                a.res(c);
+                                a.resu(d);
+                                a.resul(e);
+                                a.user(Username);
                             }
                         }
 
@@ -519,7 +532,7 @@ public class UserPage extends javax.swing.JFrame {
                         {
                             metric= "The risk is " +add +". " + "Releasing these data will result in high privacy risk!";
 
-                            int risk = JOptionPane.showConfirmDialog(null,metric, "Are you sure you want to disclose your personala data?",JOptionPane.ERROR_MESSAGE,JOptionPane.YES_NO_OPTION);
+                            int risk = JOptionPane.showConfirmDialog(null,metric, "Are you sure you want to disclose your personal data?",JOptionPane.ERROR_MESSAGE,JOptionPane.YES_NO_OPTION);
                             if (risk == JOptionPane.YES_OPTION)
                             {
                                 ResultPage a =new ResultPage();
@@ -534,7 +547,20 @@ public class UserPage extends javax.swing.JFrame {
                             }
                             else
                             {
-
+                               pst2=con.prepareStatement("update customers set address='-' where username=? "); 
+                               pst2.setString(1, Username);
+                               pst2.executeUpdate();
+                               JOptionPane.showMessageDialog(null,"You have not agree to dispose the high risk attack probability and the value has been deleted from our database!");
+                               ResultPage a =new ResultPage();
+                                a.setVisible(true);
+                                this.dispose();
+                                this.setVisible(true);
+                                this.setVisible(false);
+                                a.re(b);
+                                a.res(c);
+                                a.resu(d);
+                                a.resul(e);
+                                a.user(Username);
                             }
                         }
 
@@ -618,7 +644,7 @@ public class UserPage extends javax.swing.JFrame {
                         {
                             metric= "The risk is " +city+". " + "Releasing these data will result in high privacy risk!";
 
-                            int risk = JOptionPane.showConfirmDialog(null,metric, "Are you sure you want to disclose your personala data?",JOptionPane.ERROR_MESSAGE,JOptionPane.YES_NO_OPTION);
+                            int risk = JOptionPane.showConfirmDialog(null,metric, "Are you sure you want to disclose your personal data?",JOptionPane.ERROR_MESSAGE,JOptionPane.YES_NO_OPTION);
                             if (risk == JOptionPane.YES_OPTION)
                             {
                                 ResultPage a =new ResultPage();
@@ -633,7 +659,20 @@ public class UserPage extends javax.swing.JFrame {
                             }
                             else
                             {
-
+                              pst3=con.prepareStatement("update customers set city='-' where username=? "); 
+                               pst3.setString(1, Username);
+                               pst3.executeUpdate();
+                               JOptionPane.showMessageDialog(null,"You have not agree to dispose the high risk attack probability and the value has been deleted from our database!");
+                               ResultPage a =new ResultPage();
+                                a.setVisible(true);
+                                this.dispose();
+                                this.setVisible(true);
+                                this.setVisible(false);
+                                a.re(b);
+                                a.res(c);
+                                a.resu(d);
+                                a.resul(e);
+                                a.user(Username);
                             }
                         }
                     }
@@ -719,7 +758,7 @@ public class UserPage extends javax.swing.JFrame {
                         {
                             metric= "The risk is " +pc+". " + "Releasing these data will result in high privacy risk!";
 
-                            int risk = JOptionPane.showConfirmDialog(null,metric, "Are you sure you want to disclose your personala data?",JOptionPane.ERROR_MESSAGE,JOptionPane.YES_NO_OPTION);
+                            int risk = JOptionPane.showConfirmDialog(null,metric, "Are you sure you want to disclose your personal data?",JOptionPane.ERROR_MESSAGE,JOptionPane.YES_NO_OPTION);
                             if (risk == JOptionPane.YES_OPTION)
                             {
                                 ResultPage a =new ResultPage();
@@ -734,7 +773,20 @@ public class UserPage extends javax.swing.JFrame {
                             }
                             else
                             {
-
+                              pst4=con.prepareStatement("update customers set postalCode='-' where username=? "); 
+                               pst4.setString(1, Username);
+                               pst4.executeUpdate();
+                               JOptionPane.showMessageDialog(null,"You have not agree to dispose the high risk attack probability and the value has been deleted from our database!");
+                               ResultPage a =new ResultPage();
+                                a.setVisible(true);
+                                this.dispose();
+                                this.setVisible(true);
+                                this.setVisible(false);
+                                a.re(b);
+                                a.res(c);
+                                a.resu(d);
+                                a.resul(e);
+                                a.user(Username);
                             }
                         }
                     }
@@ -818,7 +870,7 @@ public class UserPage extends javax.swing.JFrame {
                         {
                             metric= "The risk is " +country+". " + "Releasing these data will result in high privacy risk!";
 
-                            int risk = JOptionPane.showConfirmDialog(null,metric, "Are you sure you want to disclose your personala data?",JOptionPane.ERROR_MESSAGE,JOptionPane.YES_NO_OPTION);
+                            int risk = JOptionPane.showConfirmDialog(null,metric, "Are you sure you want to disclose your personal data?",JOptionPane.ERROR_MESSAGE,JOptionPane.YES_NO_OPTION);
                             if (risk == JOptionPane.YES_OPTION)
                             {
                                 ResultPage a =new ResultPage();
@@ -833,7 +885,20 @@ public class UserPage extends javax.swing.JFrame {
                             }
                             else
                             {
-
+                              pst5=con.prepareStatement("update customers set country='-' where username=? "); 
+                               pst5.setString(1, Username);
+                               pst5.executeUpdate();
+                               JOptionPane.showMessageDialog(null,"You have not agree to dispose the high risk attack probability and the value has been deleted from our database!");
+                               ResultPage a =new ResultPage();
+                                a.setVisible(true);
+                                this.dispose();
+                                this.setVisible(true);
+                                this.setVisible(false);
+                                a.re(b);
+                                a.res(c);
+                                a.resu(d);
+                                a.resul(e);
+                                a.user(Username);
                             }
                         }
 
@@ -919,7 +984,7 @@ public class UserPage extends javax.swing.JFrame {
                         {
                             metric= "The risk is " +sur+". " + "Releasing these data will result in high privacy risk!";
 
-                            int risk = JOptionPane.showConfirmDialog(null,metric, "Are you sure you want to disclose your personala data?",JOptionPane.ERROR_MESSAGE,JOptionPane.YES_NO_OPTION);
+                            int risk = JOptionPane.showConfirmDialog(null,metric, "Are you sure you want to disclose your personal data?",JOptionPane.ERROR_MESSAGE,JOptionPane.YES_NO_OPTION);
                             if (risk == JOptionPane.YES_OPTION)
                             {
                                 ResultPage a =new ResultPage();
@@ -934,7 +999,20 @@ public class UserPage extends javax.swing.JFrame {
                             }
                             else
                             {
-
+                                pst6=con.prepareStatement("update customers set customerSurname='-' where username=? "); 
+                               pst6.setString(1, Username);
+                               pst6.executeUpdate();
+                               JOptionPane.showMessageDialog(null,"You have not agree to dispose the high risk attack probability and the value has been deleted from our database!");
+                               ResultPage a =new ResultPage();
+                                a.setVisible(true);
+                                this.dispose();
+                                this.setVisible(true);
+                                this.setVisible(false);
+                                a.re(b);
+                                a.res(c);
+                                a.resu(d);
+                                a.resul(e);
+                                a.user(Username);
                             }
                         }
 

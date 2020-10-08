@@ -105,7 +105,7 @@ public class HelpPage extends javax.swing.JFrame {
         jLabel23.setText("Ioannis Bakomichalis 2020");
 
         jLabel10.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
-        jLabel10.setText(" have an account create one in Login Page.");
+        jLabel10.setText(" have an account create one by pressing the button Sign Up.");
 
         jLabel11.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
         jLabel11.setText("and click Attack Probability Button.");
@@ -173,7 +173,7 @@ public class HelpPage extends javax.swing.JFrame {
         jLabel20.setText("In other case you can select if you want to disclose the attribute's data");
 
         jLabel21.setFont(new java.awt.Font("Segoe UI Semibold", 1, 14)); // NOI18N
-        jLabel21.setText("in a high privacy risk (>66%).");
+        jLabel21.setText("in a high privacy risk (>66%). Finally, you can print or download the report.");
 
         jLabel8.setFont(new java.awt.Font("Segoe UI Semibold", 1, 18)); // NOI18N
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/privacysecurity/images/icons8_1_40px.png"))); // NOI18N
@@ -237,8 +237,9 @@ public class HelpPage extends javax.swing.JFrame {
                             .addComponent(jLabel17)
                             .addComponent(jLabel19)
                             .addComponent(jLabel18)
-                            .addComponent(jLabel21)
-                            .addComponent(jLabel20)))
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jLabel21, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(jLabel20, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(30, 30, 30)
@@ -255,7 +256,7 @@ public class HelpPage extends javax.swing.JFrame {
                             .addComponent(jLabel26)
                             .addComponent(jLabel11)
                             .addComponent(jLabel13))))
-                .addGap(0, 32, Short.MAX_VALUE))
+                .addGap(0, 28, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
