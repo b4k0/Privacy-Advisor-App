@@ -3,14 +3,12 @@
 
 IB Privacy Advisor App is an user-centered app that help people and especially customers to understand how risky is to give their personal data in any e-business. For this reason, we focus on the probability of Bayes (Rule of Bayes) and  GDPR services to explain them generally the probability to attack and intercep their personal data! Also, we offer the results in an auto Jasper Report with the suitable information for attack probability of any variable!
 
-## Report of Diploma Thesis "Application for attack probability and risk metrics in intercepting personal data from Web" (IB Privacy Advisor App)
+## [Report of Diploma Thesis "Application for attack probability and risk metrics in intercepting personal data from Web" (IB Privacy Advisor App)](https://github.com/Mpak1996/Privacy-Advisor-App/files/7236130/default.pdf)
 ![DiplomaThesisPreview](https://user-images.githubusercontent.com/51766689/134907645-f48a394a-eada-423d-8a66-32bfefe1a03d.PNG)
 
-https://github.com/Mpak1996/Privacy-Advisor-App/files/7236130/default.pdf
 
-## Download .exe
+## [Download .exe](https://www.dropbox.com/s/cslvals0qt91nq5/ib_setup.exe?dl=0)
 
-https://www.dropbox.com/s/cslvals0qt91nq5/ib_setup.exe?dl=0
 
 ## Architecture
 
